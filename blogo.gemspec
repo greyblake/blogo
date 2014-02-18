@@ -14,10 +14,8 @@ Gem::Specification.new do |s|
   s.description = "TODO: Description of Blogo."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.markdown"]
+  s.test_files = Dir["rspec/**/*"]
 
   s.add_dependency "rails", "~> 4.0.0"
-
-  s.add_development_dependency "sqlite3"
 end
