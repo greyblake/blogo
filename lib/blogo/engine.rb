@@ -1,6 +1,5 @@
 module Blogo
   class Engine < ::Rails::Engine
-
     engine_name "blogo"
 
     config.generators do |g|

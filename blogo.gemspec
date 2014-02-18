@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
   s.test_files = Dir["rspec/**/*"]
 
   s.add_dependency "rails", "~> 4.0.0"
+  s.add_dependency "bcrypt-ruby"
 end

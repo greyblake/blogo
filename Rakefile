@@ -17,7 +17,7 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 
 desc "Run all specs in spec directory"
-RSpec::Core::RakeTask.new :spec => %w(app:db:drop app:db:create app:db:migrate)
+RSpec::Core::RakeTask.new :spec => %w(app:db:drop app:db:create app:db:migrate app:db:test:prepare)
 
 
 
