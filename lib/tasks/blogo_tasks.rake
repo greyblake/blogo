@@ -1,19 +1,9 @@
-# desc "Explaining what the task does"
-# task :blogo do
-#   # Task goes here
-# end
-
-
 namespace :blogo do
-  namespace :uninstall do
-
-    desc 'Uninstall blogo migrations'
-    task "migrations" do
-      Dir["#{Rails.application.root}/db/migrate/*blogo.rb"].each do |file|
-        puts "remove #{file}"
-        File.delete(file)
-      end
-    end
-
+  desc 'Create admin user'
+  task :create_admin, [:name, :email, :password] => :environment do |task, args|
+    attrs = args.to_hash
+    attrs[:password_confirmation] = attrs[:password]
+    Blogo::User.create!(attrs)
+    puts "Admin #{attrs[:email]} created"
   end
 end

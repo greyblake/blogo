@@ -10,11 +10,11 @@ class CreateBlogoPosts < ActiveRecord::Migration
       t.text    :raw_content  , null: false
       t.text    :html_content , null: false
       t.boolean :published    , null: false, default: false
-      t.date    :published_on , null: false
+      t.date    :published_at , null: false
     end
 
     add_index table_name, :user_id
     add_index table_name, :url    , unique: true
-    add_index table_name, :published_on
+    add_index table_name, :published_at
   end
 end
