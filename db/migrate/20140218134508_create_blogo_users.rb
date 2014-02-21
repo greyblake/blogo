@@ -1,6 +1,6 @@
 class CreateBlogoUsers < ActiveRecord::Migration
   def change
-    table_name = 'blogo_users'
+    table_name = "#{Blogo.table_name_prefix}users"
 
     create_table(table_name) do |t|
       t.string :name           , null: false

@@ -1,6 +1,6 @@
 class CreateBlogoTags < ActiveRecord::Migration
   def change
-    table_name = 'blogo_tags'
+    table_name = "#{Blogo.table_name_prefix}tags"
 
     create_table(table_name) do |t|
       t.string :name, null: false
