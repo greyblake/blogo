@@ -4,7 +4,6 @@ FactoryGirl.define do
     sequence(:url) { |n| "how-to-speak-esperanto-#{n}" }
     raw_content "Say Saluton!"
     html_content "<p>Say Saluton!</p>"
-    markup_format 'markdown'
     published_at { Time.zone.now }
     association :user
 

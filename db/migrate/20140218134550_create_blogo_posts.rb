@@ -6,7 +6,6 @@ class CreateBlogoPosts < ActiveRecord::Migration
       t.integer :user_id      , null: false
       t.string  :url          , null: false
       t.string  :title        , null: false
-      t.string  :markup_format, null: false
       t.text    :raw_content  , null: false
       t.text    :html_content , null: false
       t.boolean :published    , null: false, default: false

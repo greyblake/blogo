@@ -18,22 +18,23 @@ module Blogo::Renderer
 
       # Try to load dependencies, otherwise raise meaningful error.
       #
+      # @param renderer_name [Symbol, String]
+      #
       # @return [void]
-      def load_dependencies!
+      def load_dependencies!(renderer_name)
         return unless dependencies
 
         dependencies.each do |dependency|
           begin
             require dependency[:require]
           rescue LoadError
-            msg = "Cannot load such file `#{dependency[:require]}`. " \
-                  "Please add `gem '#{dependency[:gem]}' to the Gemfile"
+            msg = "Please add `gem \"#{dependency[:gem]}\"` to the Gemfile " \
+                  "to use Blogo with #{renderer_name.inspect} renderer"
             raise LoadError, msg
           end
         end
       end
     end
-
 
 
     # @param raw_text [String]
@@ -42,5 +43,6 @@ module Blogo::Renderer
     def render(raw_text)
       raise AbstractMethodCallError, __method__
     end
+
   end
 end

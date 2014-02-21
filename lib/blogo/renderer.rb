@@ -18,7 +18,7 @@ module Blogo
     # @return [Blogo::Renderer::Base]
     def self.get(format)
       if renderer_class = RENDERERS[format.to_sym]
-        renderer_class.load_dependencies!
+        renderer_class.load_dependencies!(format)
         renderer_class.new
       else
         raise(Blogo::Error, "Can't find renderer #{format.inspect}")

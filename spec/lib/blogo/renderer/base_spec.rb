@@ -10,7 +10,7 @@ describe Blogo::Renderer::Base do
   describe '#load_dependencies!' do
     it 'raises if can not load dependency' do
       expect {
-        renderer_class.load_dependencies!
+        renderer_class.load_dependencies!(:format)
       }.to raise_error(LoadError)
     end
   end
