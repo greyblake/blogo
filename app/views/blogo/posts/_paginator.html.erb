@@ -1,6 +1,6 @@
 <ul class="pure-paginator paginator">
   <% if @paginator.prev_page %>
-    <% prev_link = page_path(@paginator.prev_page) %>
+    <% prev_link = path_to_page(@paginator.prev_page, @tag) %>
     <li> <a class="pure-button prev" href="<%= prev_link %>">&#171;</a> </li>
   <% end %>
 
@@ -9,12 +9,12 @@
     <% page_class = 'pure-button' %>
     <% page_class << ' pure-button-active' if @paginator.page == page %>
 
-    <li><%= link_to page, page_path(page), class: page_class %></li>
+    <li><%= link_to page, path_to_page(page, @tag), class: page_class %></li>
   <% end %>
 
 
   <% if @paginator.next_page %>
-    <% next_link = page_path(@paginator.next_page) %>
+    <% next_link = path_to_page(@paginator.next_page, @tag) %>
     <li><a class="pure-button prev" href="<%= next_link %>">&#187;</a></li>
   <% end %>
 </ul>

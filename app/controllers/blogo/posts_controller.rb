@@ -3,6 +3,7 @@ module Blogo
     layout 'blogo/application'
 
     def index
+      @tag = params[:tag]
       set_vars
       set_paginator
     end
@@ -16,16 +17,31 @@ module Blogo
     private
 
     def set_paginator
+      posts = published_posts
+      posts = posts.joins(:tags).where("#{Tag.table_name}.name = ?", @tag) if @tag
+
       @paginator = Paginator.new(
-        Post.published,
+        posts,
         :page     => (params[:page] || 1),
-        :per_page => Blogo.config.posts_per_page,
-        :size     => Blogo.config.paginator_size)
+        :per_page => conf.posts_per_page,
+        :size     => conf.paginator_size)
     end
 
     def set_vars
-      @recent_posts = Post.published.limit(Blogo.config.recent_posts) if Blogo.config.recent_posts
+      @recent_posts = published_posts.limit(conf.recent_posts) if conf.recent_posts
       @tags = Tag.all
+    end
+
+
+    def published_posts
+      Post.published
+    end
+
+    # Engine configuration. Method +config+ is already used by Rails.
+    #
+    # @return [Blogo::Config]
+    def conf
+      Blogo.config
     end
   end
 end

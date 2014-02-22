@@ -6,7 +6,7 @@
     <ul class="blogo-recent-posts">
       <% @recent_posts.each do |post| %>
         <li>
-          <%= link_to post.title, full_post_path(post) %>
+          <%= link_to post.title, path_to_post(post) %>
         </li>
       <% end %>
     </ul>
@@ -18,7 +18,7 @@
   </header>
   <div class="tags">
     <% @tags.each do |tag| %>
-      <a href='#' class='tag pure-button button-secondary'><%= tag.name %></a>
+      <%= link_to tag.name, tag_path(tag), class: 'tag pure-button button-secondary' %>
     <% end %>
   <div>
 </aside>

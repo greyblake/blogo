@@ -18,5 +18,5 @@
     <%= raw(post.html_overiew || post.html_content) %>
   </div>
 
-  <%= link_to "Read ➞", full_post_path(post), class: 'pure-button button-secondary' %>
+  <%= link_to "Read ➞", path_to_post(post), class: 'pure-button button-secondary' %>
 </section>
