@@ -3,7 +3,7 @@ module Blogo::Renderer
 
     # :nodoc:
     def render(raw_text)
-      raw_text
+      raw_text.dup
     end
 
   end

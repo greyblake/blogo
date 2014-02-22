@@ -1,12 +1,14 @@
 module Blogo
   class BasePostService
+    JUMP_BREAK = '<!--more-->'
+
 
     private
 
     def assign_attributes
       @post.assign_attributes(@post_attrs)
       @post.published_at  ||= Time.zone.now
-      @post.html_content = Blogo.config.renderer.render(@post.raw_content)
+      render_and_set_content!
     end
 
 
@@ -24,12 +26,23 @@ module Blogo
       end
     end
 
-
     def clear_tags!
       @post.tags.destroy_all.each do |tag|
         tag.destroy if tag.posts.count.zero?
       end
     end
 
+    def render_and_set_content!
+      renderer = Blogo.config.renderer
+
+      overview, rest = @post.raw_content.split(JUMP_BREAK, 2)
+      if rest.present?
+        @post.html_overiew = renderer.render(overview)
+        @post.html_content = renderer.render(overview + rest)
+      else
+        @post.html_overiew = nil
+        @post.html_content = renderer.render(@post.raw_content)
+      end
+    end
   end
 end

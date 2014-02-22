@@ -8,6 +8,7 @@ class CreateBlogoPosts < ActiveRecord::Migration
       t.string  :title        , null: false
       t.text    :raw_content  , null: false
       t.text    :html_content , null: false
+      t.text    :html_overiew , null: true
       t.boolean :published    , null: false, default: false
       t.date    :published_at , null: false
     end

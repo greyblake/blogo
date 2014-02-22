@@ -18,6 +18,8 @@ describe Blogo::CreatePostService do
       expect(post.title).to eq 'The Title'
       expect(post.url).to eq 'the-url'
       expect(post.raw_content).to eq 'The content'
+      expect(post.html_content).to eq 'The content'
+      expect(post.html_overiew).to be_nil
     end
 
     describe 'with tags' do
@@ -43,6 +45,21 @@ describe Blogo::CreatePostService do
         expect(service.create!).to be_false
         expect(Blogo::Post.count).to eq 0
         expect(service.post).to have(1).error_on(:title)
+      end
+    end
+
+
+    describe 'with jump break <!--more-->' do
+      before do
+        params[:raw_content] = 'Prelude... <!--more--> The content'
+      end
+
+      it 'sets html_overiew' do
+        expect(service.create!).to be_true
+        post = user.posts.last
+
+        expect(post.html_content).to eq 'Prelude...  The content'
+        expect(post.html_overiew).to eq 'Prelude... '
       end
     end
   end
