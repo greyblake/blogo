@@ -1,0 +1,145 @@
+$width: 940px
+$font: Helvetica, Arial, sans-serif
+$font: sans-serif
+
+body
+  background: #F3F3F3
+  background-image: image-url('blogo/bg5.png')
+
+
+#content
+  padding: 25px
+
+#main
+  padding-right: 40px
+  .article-overview
+    padding-bottom: 10px
+    border-bottom: 2px solid #aaa
+
+
+#container
+  margin: 0 auto
+  max-width: $width
+
+  background: #FFF
+  display: block
+  box-shadow: 0px 0px 10px #aaa
+
+  .blogo-header
+    background: #3D4F5D
+    display: block
+    color: #fff
+    padding: 10px 25px
+    //border-bottom: 4px solid #aaa
+    h1
+      color: #fff
+      font-size: 2em
+      line-height: 1.5em
+      margin: 4px 0px
+    &>h2
+      font-weight: 100
+      margin: 3px 0px
+      font-style: italic
+      font-size: 1.2em
+      line-height: 1em
+      color: #B0CADB
+    a
+      text-decoration: none
+      color: #fff
+
+    ul
+      list-style: none
+      li
+        display: inline-block
+        text-align: right
+
+    .rss-icon
+      display: block
+      width: 48px
+      height: 48px
+      background-image: image-url('blogo/rss-icon.png')
+      &:hover
+        background-image: image-url('blogo/rss-icon-active.png')
+
+
+.blogo-article
+  font-family: $font
+  .posted
+    font-size: 1em
+    padding: 4px 0px
+    color: #888
+
+      color: #fff
+  h1, h2, h3, h4, h5
+    color: #444
+  h2, h3, h4, h5
+    margin-bottom: 0.25em
+  h1
+    font-size: 2em
+    line-height: 1.2em
+  h2
+    font-size: 1.4em
+  h3
+    font-size: 1.2em
+
+  p
+    color: #444
+    text-align: justify
+    margin-bottom: 1.5em
+    font-size: 1em
+    line-height: 1.5em
+    a
+      color: #286790
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  ul
+    li
+      font-size: 1em
+      line-height: 1.5em
+      a
+        color: #286790
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+  img
+    border: 0.3em solid #FFFFFF
+    border-radius: 0.3em
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.75)
+    height: auto
+    margin: 10px 0
+    max-width: 100%
+
+aside
+  h1
+    background: #5b768b
+    color: #dae1e7
+    font-size: 1.2em
+    margin-top: 30px
+    padding: 10px
+    border-radius: 8px 8px 0px 0px
+  ul
+    list-style-type: none
+    margin: 0px
+    padding: 0px
+  a
+    color: #286790
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  .tag
+    margin: 2px
+
+
+.tags
+  text-align: center
+
+.tag
+  display: inline-block
+  position: relative
+  font-size: 12px
+  line-height: 14px
+
+
+.blogo-recent-posts li
+  margin-bottom: 12px

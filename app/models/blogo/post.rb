@@ -4,14 +4,15 @@ class Blogo::Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings, dependent: :destroy
 
-  validates :url, :title,  :raw_content, presence: true
 
-  scope :default,  -> {order("published_at DESC, monologue_posts.created_at DESC, monologue_posts.updated_at DESC") }
-  scope :published, -> { where(published: true).where("published_at <= ?", DateTime.now) }
+  validates :url, :title,  :raw_content, presence: true
+  validates :url, uniqueness: true
+
+  scope :published, -> { where(published: true).where("published_at <= ?", Time.zone.now) }
 
   attr_accessor :tags_string
 
-
+  default_scope order('published_at DESC')
 
   def status
     published? ? 'published' : 'draft'

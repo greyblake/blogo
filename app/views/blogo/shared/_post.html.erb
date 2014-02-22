@@ -1,0 +1,21 @@
+<article class="blogo-article">
+  <header>
+    <h1><%= @post.title %></h1>
+
+    <div class="posted">
+      <span>
+        By <%= @post.user.name %>
+      </span> |
+      <span>
+        <time datetime="<%= @post.published_at %>">
+          <%= I18n.localize(@post.published_at.to_date, format: :long) %>
+        </time>
+      </span>
+    </div>
+  </header>
+
+  <div class="content">
+    <%= raw @post.html_content %>
+  </div>
+
+</article>

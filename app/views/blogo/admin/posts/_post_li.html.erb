@@ -1,0 +1,14 @@
+<%
+  confirm_message = %Q'Are you sure you want to delete "#{post.title}"?'
+%>
+
+<tr>
+  <td><%= link_to post.title, admin_post_path(post) %></td>
+  <td><%= post.status %></td>
+  <td><%= post.user.name %></td>
+  <td><%= post.published_at %></td>
+  <td>
+    <%= link_to 'edit', edit_admin_post_path(post), class: "pure-button  button-secondary" %>
+    <%= link_to 'delete', admin_post_path(post), method: :delete, data: {confirm: confirm_message}, class: "pure-button  button-warning" %>
+  </td>
+</tr>

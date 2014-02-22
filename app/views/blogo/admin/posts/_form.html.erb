@@ -1,0 +1,43 @@
+<%= f.error_messages %>
+
+<h1 class="admin-header"> Add Post </h1>
+
+<div class="pure-g-r form-new-post">
+  <div class="pure-u-17-24">
+
+      <%= f.label :title %>
+      <%= f.text_field :title, required: true, class: 'input-left', id: 'post-title', style: "font-weight: bold; color: #444"  %>
+
+
+      <%= f.label :raw_content, "Content" %>
+      <%= f.text_area :raw_content, class: 'input-content input-left', required: true %>
+
+      <%= f.label :tags_string, "Tags" %>
+      <%= f.text_field :tags_string, class: 'input-left', placeholder: 'Tags separated with commas' %>
+
+    </div>
+
+  <div class="pure-u-7-24">
+    <%= f.label :url %>
+    <%= f.text_field :url, class: 'pure-input-1', required: true, id: 'post-url' %>
+
+    <%= f.label :published_at %>
+    <%= f.text_field :published_at, class: 'pure-input-1', placeholder: 'Today' %>
+
+    <%= f.label :published, class: 'pure-checkbox' do %>
+      <%= f.check_box :published %>
+      Publish
+    <% end %>
+
+  </div>
+</div>
+
+<br />
+<%= submit_tag "Save", class: 'pure-button button-success' %>
+<%= submit_tag "Preview", class: 'pure-button button-secondary' %>
+
+
+
+<script>
+  jQuery('#post-title').titleToUrl('#post-url')
+</script>

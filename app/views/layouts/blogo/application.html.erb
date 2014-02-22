@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blogo</title>
+  <%= stylesheet_link_tag "blogo/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <header class="blogo-header">
+      <h1>
+        <%= link_to Blogo.config.site_title, root_path %>
+      </h1>
+      <h2><%= Blogo.config.site_subtitle %></h2>
+    </header>
+
+    <div id="content">
+      <div class="pure-g-r">
+        <div class="pure-u-3-4">
+          <div id="main">
+            <%= yield %>
+          </div>
+        </div>
+
+        <div class="pure-u-1-4">
+          <%= render partial: 'blogo/shared/aside' %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<section class="blogo-article article-overview">
+  <header>
+    <h1><%= post.title %></h1>
+
+    <div class="posted">
+      <span>
+        By <%= post.user.name %>
+      </span> |
+      <span>
+        <time datetime="<%= post.published_at %>">
+          <%= I18n.localize(post.published_at.to_date, format: :long) %>
+        </time>
+      </span>
+    </div>
+  </header>
+
+  <div class="content">
+    <%= raw(post.html_overiew || post.html_content) %>
+  </div>
+
+  <%= link_to "Read ➞", full_post_path(post), class: 'pure-button button-secondary' %>
+</section>

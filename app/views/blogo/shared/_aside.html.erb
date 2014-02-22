@@ -1,0 +1,21 @@
+<aside>
+  <header>
+    <h1>Recent posts</h1>
+  </header>
+  <ul class="blogo-recent-posts">
+    <% @recent_posts.each do |post| %>
+      <li>
+        <%= link_to post.title, full_post_path(post) %>
+      </li>
+    <% end %>
+  </ul>
+
+  <header>
+    <h1>Tags</h1>
+  </header>
+  <div class="tags">
+    <% @tags.each do |tag| %>
+      <a href='#' class='tag pure-button button-secondary'><%= tag.name %></a>
+    <% end %>
+  <div>
+</aside>
