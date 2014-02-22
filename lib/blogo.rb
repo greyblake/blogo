@@ -4,6 +4,7 @@ require 'blogo/engine'
 require 'blogo/config'
 
 require 'blogo/renderer'
+require 'blogo/paginator'
 
 
 module Blogo

@@ -12,7 +12,7 @@ class Blogo::Post < ActiveRecord::Base
 
   attr_accessor :tags_string
 
-  default_scope order('published_at DESC')
+  default_scope { order('published_at DESC') }
 
   def status
     published? ? 'published' : 'draft'

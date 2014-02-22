@@ -1,20 +1,19 @@
 module Blogo
   class Config
-
     attr_accessor :site_title
-
     attr_accessor :site_subtitle
-
-    attr_reader :renderer
-
     attr_accessor :table_name_prefix
-
+    attr_accessor :posts_per_page
+    attr_accessor :paginator_size
+    attr_reader :renderer
 
     # Set default values.
     def initialize
       @site_title        = 'Blogo'
       @site_subtitle     = 'Mountable blog engine for Ruby on Rails'
       @table_name_prefix = 'blogo_'
+      @posts_per_page    = 10
+      @paginator_size    = 5
 
       self.renderer = :html
     end

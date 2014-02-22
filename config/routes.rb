@@ -9,6 +9,9 @@ Blogo::Engine.routes.draw do
     resources :users
   end
 
-  root to:  "posts#index"
+
+  root to: "posts#index"
+  get '/page/:page' =>  'posts#index', as: 'page'
+
   get ":year/:post_url" => "posts#show", as:  "post"
 end

@@ -1,0 +1,20 @@
+<ul class="pure-paginator paginator">
+  <% if @paginator.prev_page %>
+    <% prev_link = page_path(@paginator.prev_page) %>
+    <li> <a class="pure-button prev" href="<%= prev_link %>">&#171;</a> </li>
+  <% end %>
+
+
+  <% @paginator.pages.each do |page| %>
+    <% page_class = 'pure-button' %>
+    <% page_class << ' pure-button-active' if @paginator.page == page %>
+
+    <li><%= link_to page, page_path(page), class: page_class %></li>
+  <% end %>
+
+
+  <% if @paginator.next_page %>
+    <% next_link = page_path(@paginator.next_page) %>
+    <li><a class="pure-button prev" href="<%= next_link %>">&#187;</a></li>
+  <% end %>
+</ul>
