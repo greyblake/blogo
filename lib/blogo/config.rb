@@ -5,6 +5,7 @@ module Blogo
     attr_accessor :table_name_prefix
     attr_accessor :posts_per_page
     attr_accessor :paginator_size
+    attr_accessor :recent_posts
     attr_reader :renderer
 
     # Set default values.
@@ -14,6 +15,7 @@ module Blogo
       @table_name_prefix = 'blogo_'
       @posts_per_page    = 10
       @paginator_size    = 5
+      @recent_posts      = 5
 
       self.renderer = :html
     end

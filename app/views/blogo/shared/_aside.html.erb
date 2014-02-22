@@ -1,14 +1,17 @@
 <aside>
-  <header>
-    <h1>Recent posts</h1>
-  </header>
-  <ul class="blogo-recent-posts">
-    <% @recent_posts.each do |post| %>
-      <li>
-        <%= link_to post.title, full_post_path(post) %>
-      </li>
-    <% end %>
-  </ul>
+  <% if @recent_posts %>
+    <header>
+      <h1>Recent posts</h1>
+    </header>
+    <ul class="blogo-recent-posts">
+      <% @recent_posts.each do |post| %>
+        <li>
+          <%= link_to post.title, full_post_path(post) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
 
   <header>
     <h1>Tags</h1>

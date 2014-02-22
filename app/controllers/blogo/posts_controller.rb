@@ -24,7 +24,7 @@ module Blogo
     end
 
     def set_vars
-      @recent_posts = Post.published
+      @recent_posts = Post.published.limit(Blogo.config.recent_posts) if Blogo.config.recent_posts
       @tags = Tag.all
     end
   end
