@@ -6,6 +6,7 @@ module Blogo
     attr_accessor :posts_per_page
     attr_accessor :paginator_size
     attr_accessor :recent_posts
+    attr_accessor :disqus_shortname
     attr_reader :renderer
 
     # Set default values.
@@ -16,6 +17,7 @@ module Blogo
       @posts_per_page    = 10
       @paginator_size    = 5
       @recent_posts      = 5
+      @disqus_shortname  = nil
 
       self.renderer = :html
     end

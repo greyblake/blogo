@@ -2,6 +2,8 @@ $width: 940px
 $font: Helvetica, Arial, sans-serif
 $font: sans-serif
 
+$link-color: #286790
+
 body
   background: #F3F3F3
   background-image: image-url('blogo/bg5.png')
@@ -17,6 +19,16 @@ body
     border-bottom: 2px solid #aaa
     &:last-child
       border-bottom: 0px
+
+
+#disqus-comments
+  border-top: 2px solid #aaa
+  margin-top: 30px
+  h1
+    color: #888
+    font-size: 1.4em
+  a
+    color: $link-color
 
 
 #container
@@ -91,7 +103,7 @@ body
     font-size: 1em
     line-height: 1.5em
     a
-      color: #286790
+      color: $link-color
       text-decoration: none
       &:hover
         text-decoration: underline
@@ -100,7 +112,7 @@ body
       font-size: 1em
       line-height: 1.5em
       a
-        color: #286790
+        color: $link-color
         text-decoration: none
         &:hover
           text-decoration: underline
@@ -125,7 +137,7 @@ aside
     margin: 0px
     padding: 0px
   a
-    color: #286790
+    color: $link-color
     text-decoration: none
     &:hover
       text-decoration: underline
