@@ -21,9 +21,9 @@ body
 
 
 #disqus-comments
-  border-top: 2px solid #aaa
   margin-top: 30px
   h1
+    border-bottom: 2px solid #aaa
     color: #888
     font-size: 1.4em
   a
@@ -90,6 +90,9 @@ body
   h1
     font-size: 2em
     line-height: 1.2em
+    a
+      text-decoration: none
+      color: #444
   h2
     font-size: 1.4em
   h3
@@ -123,6 +126,9 @@ body
     margin: 10px 0
     max-width: 100%
 
+.article-tags
+  float: right
+
 aside
   h1
     background: #5b768b
@@ -131,6 +137,7 @@ aside
     margin-top: 30px
     padding: 10px
     border-radius: 8px 8px 0px 0px
+    text-align: center
   ul
     list-style-type: none
     margin: 0px
@@ -159,3 +166,18 @@ aside
 
 .paginator
   text-align: center
+
+.button-secondary, .button-warning, .button-success
+  color: white
+  border-radius: 4px
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+
+.button-secondary
+  background: rgb(66, 184, 221)
+
+.button-warning
+  background: rgb(223, 117, 20)
+
+.button-success
+  background: rgb(28, 184, 65)
+

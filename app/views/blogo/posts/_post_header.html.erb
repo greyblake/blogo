@@ -1,0 +1,20 @@
+<header>
+  <h1><%= link_to post.title, path_to_post(post) %></h1>
+
+  <div class="posted">
+    <span>
+      By <%= post.user.name %>
+    </span> |
+    <span>
+      <time datetime="<%= post.published_at %>">
+        <%= I18n.localize(post.published_at.to_date, format: :long) %>
+      </time>
+    </span>
+
+    <div class="article-tags">
+      <% post.tags.each do |tag| %>
+        <%= link_to tag.name, tag_path(tag), class: 'tag pure-button button-secondary' %>
+      <% end %>
+    </div>
+  </div>
+</header>
