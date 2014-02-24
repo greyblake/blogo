@@ -4,22 +4,17 @@
 
 <div class="pure-g-r form-new-post">
   <div class="pure-u-17-24">
+    <div class="left-fields"^>
+      <%= f.text_field :title, required: true, class: 'input-left', id: 'post-title', placeholder: 'Post Title' %>
 
-      <%= f.label :title %>
-      <%= f.text_field :title, required: true, class: 'input-left', id: 'post-title', style: "font-weight: bold; color: #444"  %>
+      <%= f.text_area :raw_content, class: 'ckeditor', required: true %>
 
-
-      <%= f.label :raw_content, "Content" %>
-      <%= f.text_area :raw_content, class: 'input-content input-left', required: true %>
-
-      <%= f.label :tags_string, "Tags" %>
       <%= f.text_field :tags_string, class: 'input-left', placeholder: 'Tags separated with commas' %>
-
     </div>
+  </div>
 
   <div class="pure-u-7-24">
-    <%= f.label :url %>
-    <%= f.text_field :url, class: 'pure-input-1', required: true, id: 'post-url' %>
+    <%= f.text_field :url, class: 'pure-input-1', required: true, id: 'post-url', placeholder: 'unique-url' %>
 
     <%= f.label :published_at %>
     <%= f.text_field :published_at, class: 'pure-input-1', placeholder: 'Today' %>

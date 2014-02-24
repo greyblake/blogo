@@ -7,5 +7,14 @@ module Blogo
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
       g.test_framework :rspec, :fixture => false
     end
+
+    config.assets.precompile += %W(
+      blogo/*.js
+      blogo/*.css
+      blogo/*.png
+      blogo/*.gif
+      blogo/*.html
+      blogo/*.md
+    )
   end
 end

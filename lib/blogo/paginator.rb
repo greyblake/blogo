@@ -75,7 +75,8 @@ module Blogo
     #
     # @return [Integer, nil]
     def prev_page
-      pages.first == 1 ? nil : pages.first - 1
+      first_page = pages.first.to_i
+      first_page > 1 ? (first_page - 1) : nil
     end
 
 
@@ -83,7 +84,11 @@ module Blogo
     #
     # @return [Integer, nil]
     def next_page
-      pages_count > pages.last ? (pages.last + 1) : nil
+      if pages.any? && pages_count > pages.last
+        pages.last + 1
+      else
+        nil
+      end
     end
 
 
