@@ -7,6 +7,7 @@ Blogo::Engine.routes.draw do
     resources :sessions, only: %i(new create destroy)
     resources :posts
     resources :users
+    resources 'comments', only: %w(index)
   end
 
   root to: "posts#index"
@@ -15,6 +16,7 @@ Blogo::Engine.routes.draw do
   get '/tag/:tag/page/:page' => 'posts#index', as: 'tag_page'
 
   get '/feed' => 'posts#feed', as: 'feed', defaults: { format: 'atom' }
+
 
   get ":year/:post_url" => "posts#show", as:  "post"
 end
