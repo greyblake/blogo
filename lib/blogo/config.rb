@@ -7,6 +7,7 @@ module Blogo
     attr_accessor :paginator_size
     attr_accessor :recent_posts
     attr_accessor :disqus_shortname
+    attr_accessor :google_analytics_id
     attr_reader :renderer
 
     # Set default values.
@@ -18,6 +19,7 @@ module Blogo
       @paginator_size    = 5
       @recent_posts      = 5
       @disqus_shortname  = nil
+      @google_analytics_id = nil
 
       self.renderer = :html
     end
