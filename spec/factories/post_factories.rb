@@ -5,6 +5,7 @@ FactoryGirl.define do
     raw_content "Say Saluton!"
     html_content "<p>Say Saluton!</p>"
     published_at { Time.zone.now }
+    published true
 
     association :user
 

@@ -10,6 +10,10 @@ module Blogo
       post_path(:year => post.published_at.year, :post_url => post.url)
     end
 
+    def url_to_post(post)
+      post_url(:year => post.published_at.year, :post_url => post.url)
+    end
+
     # Path to a page or a page in scope of a particular tag.
     #
     # @param page [Integer]
@@ -22,6 +26,15 @@ module Blogo
       else
         page_path(page)
       end
+    end
+
+    # Post overview.
+    #
+    # @param post [Blogo::Post]
+    #
+    # @return [String]
+    def post_overview(post)
+      post.html_overiew ? post.html_overiew : post.html_content
     end
   end
 end

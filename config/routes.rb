@@ -14,5 +14,7 @@ Blogo::Engine.routes.draw do
   get '/tag/:tag' => 'posts#index', as: 'tag'
   get '/tag/:tag/page/:page' => 'posts#index', as: 'tag_page'
 
+  get '/feed' => 'posts#feed', as: 'feed', defaults: { format: 'atom' }
+
   get ":year/:post_url" => "posts#show", as:  "post"
 end

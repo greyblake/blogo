@@ -2,6 +2,9 @@ module Blogo
   class PostsController < ApplicationController
     layout 'blogo/application'
 
+    # Number of posts shown in feed.
+    FEED_POSTS_LIMIT = 20
+
     def index
       @tag = params[:tag]
       set_vars
@@ -11,6 +14,13 @@ module Blogo
     def show
       @post = Post.published.where(:url => params[:post_url]).first!
       set_vars
+    end
+
+    def feed
+      @posts   = published_posts.limit(FEED_POSTS_LIMIT)
+      @updated = @posts.first.try(:updated_at)
+
+      render 'feed', layout: false
     end
 
 

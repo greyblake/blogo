@@ -2,8 +2,10 @@
 <html>
 <head>
   <title>Blogo</title>
-  <%= stylesheet_link_tag "blogo/application" %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "blogo/application" %>
+
+  <%= auto_discovery_link_tag :atom, feed_path %>
 </head>
 <body>
   <div id="container">
