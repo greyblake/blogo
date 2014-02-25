@@ -7,14 +7,14 @@ require "blogo/version"
 Gem::Specification.new do |s|
   s.name        = "blogo"
   s.version     = Blogo::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Blogo."
-  s.description = "TODO: Description of Blogo."
+  s.authors     = ["Sergey Potapov"]
+  s.email       = ["blake131313@gmail.com"]
+  s.homepage    = "https://github.com/greyblake/blogo"
+  s.summary     = "Mountable blog engine for Ruby on Rails"
+  s.description = "Mountable blog engine for Ruby on Rails"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.markdown"]
+  s.files = Dir["{app,config,db,lib,vendor}/**/*", "MIT-LICENSE", "Rakefile", "README.markdown"]
   s.test_files = Dir["rspec/**/*"]
 
   s.add_dependency "rails", "~> 4.0.0"
