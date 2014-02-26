@@ -1,0 +1,6 @@
+<script type="text/javascript">
+  var callback  = '<%= params['CKEditorFuncNum'] %>';
+  var imagePath = '<%= @image_path %>';
+  var error     = '<%= @error.html_safe if @error %>';
+  window.parent.CKEDITOR.tools.callFunction(callback, imagePath, error)
+</script>

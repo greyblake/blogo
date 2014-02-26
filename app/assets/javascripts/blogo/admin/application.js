@@ -7,7 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //
-//= require ./ckeditor_basepath
+//= require blogo/ckeditor/ckeditor_basepath
 //= require blogo/ckeditor/ckeditor
 //
 //= require_tree ./helpers

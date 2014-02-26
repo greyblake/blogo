@@ -19,4 +19,14 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false
+
+
+  def admin_login
+    user = FactoryGirl.create(:user)
+    session[:blogo_user_id] = user.id
+  end
+
+  def fixture_image(name)
+    File.join(Blogo::Engine.root, 'spec/fixtures/images', name)
+  end
 end

@@ -8,6 +8,7 @@ Blogo::Engine.routes.draw do
     resources :posts
     resources :users
     resources 'comments', only: %w(index)
+    resources 'images'  , only: %w(create)
   end
 
   root to: "posts#index"
