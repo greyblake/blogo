@@ -8,8 +8,8 @@ module Blogo
     attr_accessor :recent_posts
     attr_accessor :disqus_shortname
     attr_accessor :google_analytics_id
-
     attr_accessor :keywords
+    attr_accessor :use_ckeditor
 
     attr_reader :renderer
 
@@ -23,6 +23,7 @@ module Blogo
       @recent_posts        = 5
       @disqus_shortname    = nil
       @google_analytics_id = nil
+      @use_ckeditor        = true
       @keywords            = %w(blog)
 
       self.renderer = :html

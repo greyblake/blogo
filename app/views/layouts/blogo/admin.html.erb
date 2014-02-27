@@ -3,6 +3,11 @@
 <head>
   <title>Blogo</title>
   <%= javascript_include_tag "blogo/admin/application" %>
+
+  <% if Blogo.config.use_ckeditor %>
+    <%= javascript_include_tag "blogo/admin/ckeditor" %>
+  <% end %>
+
   <%= stylesheet_link_tag "blogo/application" %>
   <%= csrf_meta_tags %>
 </head>

@@ -5,11 +5,11 @@
 <div class="pure-g-r form-new-post">
   <div class="pure-u-17-24">
     <div class="left-fields"^>
-      <%= f.text_field :title, required: true, class: 'input-left', id: 'post-title', placeholder: 'Post Title' %>
+      <%= f.text_field :title, required: true, id: 'post-title', placeholder: 'Post Title' %>
 
       <%= f.text_area :raw_content, class: 'ckeditor', required: true %>
 
-      <%= f.text_field :tags_string, class: 'input-left', placeholder: 'Tags separated with commas' %>
+      <%= f.text_field :tags_string, placeholder: 'Tags separated with commas' %>
     </div>
   </div>
 
