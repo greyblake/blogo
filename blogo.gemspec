@@ -19,4 +19,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.0.0"
   s.add_dependency "bcrypt-ruby"
+  s.add_dependency "sass-rails"
 end

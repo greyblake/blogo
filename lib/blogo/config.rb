@@ -8,18 +8,22 @@ module Blogo
     attr_accessor :recent_posts
     attr_accessor :disqus_shortname
     attr_accessor :google_analytics_id
+
+    attr_accessor :keywords
+
     attr_reader :renderer
 
     # Set default values.
     def initialize
-      @site_title        = 'Blogo'
-      @site_subtitle     = 'Mountable blog engine for Ruby on Rails'
-      @table_name_prefix = 'blogo_'
-      @posts_per_page    = 10
-      @paginator_size    = 5
-      @recent_posts      = 5
-      @disqus_shortname  = nil
+      @site_title          = 'Blogo'
+      @site_subtitle       = 'Mountable blog engine for Ruby on Rails'
+      @table_name_prefix   = 'blogo_'
+      @posts_per_page      = 10
+      @paginator_size      = 5
+      @recent_posts        = 5
+      @disqus_shortname    = nil
       @google_analytics_id = nil
+      @keywords            = %w(blog)
 
       self.renderer = :html
     end

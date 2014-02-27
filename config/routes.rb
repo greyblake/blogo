@@ -19,5 +19,5 @@ Blogo::Engine.routes.draw do
   get '/feed' => 'posts#feed', as: 'feed', defaults: { format: 'atom' }
 
 
-  get ":year/:post_url" => "posts#show", as:  "post"
+  get ":permalink" => "posts#show", as: "post"
 end

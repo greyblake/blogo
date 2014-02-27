@@ -14,7 +14,7 @@
   </div>
 
   <div class="pure-u-7-24">
-    <%= f.text_field :url, class: 'pure-input-1', required: true, id: 'post-url', placeholder: 'unique-url' %>
+    <%= f.text_field :permalink, class: 'pure-input-1', required: true, id: 'permalink', placeholder: 'unique-permalink' %>
 
     <%= f.label :published_at %>
     <%= f.text_field :published_at, class: 'pure-input-1', placeholder: 'Today' %>
@@ -34,5 +34,5 @@
 
 
 <script>
-  jQuery('#post-title').titleToUrl('#post-url')
+  jQuery('#post-title').titleToUrl('#permalink')
 </script>

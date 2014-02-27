@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Blogo::CreatePostService do
   let(:params) {{
     title: 'The Title',
-    url: 'the-url',
+    permalink: 'the-permalink',
     raw_content: 'The content'
   }}
 
@@ -16,7 +16,7 @@ describe Blogo::CreatePostService do
 
       post = user.posts.last
       expect(post.title).to eq 'The Title'
-      expect(post.url).to eq 'the-url'
+      expect(post.permalink).to eq 'the-permalink'
       expect(post.raw_content).to eq 'The content'
       expect(post.html_content).to eq 'The content'
       expect(post.html_overiew).to be_nil
@@ -25,14 +25,18 @@ describe Blogo::CreatePostService do
     describe 'with tags' do
       before do
         params[:tags_string] = ' Ruby, Esperanto, , love '
+        expect(service.create!).to be_true
       end
 
       it 'creates downcased tags and associates them with post' do
-        expect(service.create!).to be_true
-
         post = user.posts.last
         tag_names = post.tags.map(&:name)
         expect(tag_names).to match_array(%w[ruby esperanto love])
+      end
+
+      it 'sets tags_string' do
+        post = user.posts.last
+        expect(post.tags_string).to eq 'ruby, esperanto, love'
       end
     end
 

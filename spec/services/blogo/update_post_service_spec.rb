@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Blogo::UpdatePostService do
   let(:params) {{
     title: 'New Title',
-    url: 'new-url',
+    permalink: 'new-permalink',
     raw_content: 'New content'
   }}
 

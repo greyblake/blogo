@@ -56,7 +56,7 @@ module Blogo::Admin
     private
 
     def post_params
-      params.require(:post).permit(:title, :url, :published_at, :raw_content, :published, :tags_string)
+      params.require(:post).permit(:title, :permalink, :published_at, :raw_content, :published, :tags_string)
     end
   end
 end

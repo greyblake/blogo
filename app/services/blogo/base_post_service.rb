@@ -24,6 +24,8 @@ module Blogo
         tag = Blogo::Tag.where(name: tag_name).first_or_create
         @post.tags << tag unless @post.tags.include?(tag)
       end
+
+      @post.tags_string = tag_names.join(", ")
     end
 
     def clear_tags!

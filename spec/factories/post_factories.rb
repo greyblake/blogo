@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :post, class: Blogo::Post do
     title "How to speak Esperanto"
-    sequence(:url) { |n| "how-to-speak-esperanto-#{n}" }
+    sequence(:permalink) { |n| "how-to-speak-esperanto-#{n}" }
     raw_content "Say Saluton!"
     html_content "<p>Say Saluton!</p>"
     published_at { Time.zone.now }

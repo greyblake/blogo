@@ -18,7 +18,7 @@ module Blogo
   #   paginator.items  # => 3 posts
   #
   class Paginator
-    attr_reader :page
+    attr_reader :page, :per_page, :size
 
     # :nodoc:
     DEFAULT_PER_PAGE = 10

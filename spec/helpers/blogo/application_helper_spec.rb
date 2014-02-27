@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Blogo::ApplicationHelper do
   describe '#path_to_post' do
     it 'generates path to post with year' do
-      post = FactoryGirl.create(:post, published_at: '2014-01-01', url: 'new-year')
-      expect(helper).to receive(:post_path).with(year: 2014, post_url: 'new-year')
+      post = FactoryGirl.create(:post, permalink: 'new-year')
+      expect(helper).to receive(:post_path).with(permalink: 'new-year')
       helper.path_to_post(post)
     end
   end

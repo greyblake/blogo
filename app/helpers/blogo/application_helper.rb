@@ -7,11 +7,11 @@ module Blogo
     #
     # @return [String]
     def path_to_post(post)
-      post_path(:year => post.published_at.year, :post_url => post.url)
+      post_path(:permalink => post.permalink)
     end
 
     def url_to_post(post)
-      post_url(:year => post.published_at.year, :post_url => post.url)
+      post_url(:permalink => post.permalink)
     end
 
     # Path to a page or a page in scope of a particular tag.

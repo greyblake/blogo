@@ -13,9 +13,9 @@ module Blogo
       return false unless @post.valid?
 
       @post.transaction do
-        @post.save!
         clear_tags!
         set_tags!(@tags_string)
+        @post.save!
       end
 
       true

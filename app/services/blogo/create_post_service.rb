@@ -15,6 +15,10 @@ module Blogo
       @post.transaction do
         @post.save!
         set_tags!(@tags_string)
+
+        # Save tags_string
+        # TODO: fix to have 1 save
+        @post.save!
       end
 
       true
