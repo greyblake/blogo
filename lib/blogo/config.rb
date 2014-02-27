@@ -11,7 +11,7 @@ module Blogo
     attr_accessor :keywords
     attr_accessor :use_ckeditor
 
-    attr_reader :renderer
+    attr_reader :markup_lang
 
     # Set default values.
     def initialize
@@ -25,16 +25,13 @@ module Blogo
       @google_analytics_id = nil
       @use_ckeditor        = true
       @keywords            = %w(blog)
-
-      self.renderer = :html
+      @markup_lang         = :html
     end
 
-    def renderer=(value)
-      if value.respond_to?(:render)
-        @renderer = value
-      else
-        @renderer = Blogo::Renderer.get(value.to_sym)
-      end
+    def markup_lang=(lang)
+      # Try to find a renderer for the format otherwise raise
+      Blogo::Renderer.get(lang.to_sym)
+      @format = lang.to_sym
     end
   end
 end

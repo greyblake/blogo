@@ -7,7 +7,8 @@ module Blogo
 
     def assign_attributes
       @post.assign_attributes(@post_attrs)
-      @post.published_at  ||= Time.zone.now
+      @post.published_at ||= Time.zone.now
+      @post.markup_lang    = Blogo.config.markup_lang
       render_and_set_content!
     end
 
@@ -35,7 +36,7 @@ module Blogo
     end
 
     def render_and_set_content!
-      renderer = Blogo.config.renderer
+      renderer = Blogo::Renderer.get(Blogo.config.markup_lang)
 
       overview, rest = @post.raw_content.split(JUMP_BREAK, 2)
       if rest.present?

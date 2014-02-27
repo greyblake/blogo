@@ -4,7 +4,8 @@ describe Blogo::CreatePostService do
   let(:params) {{
     title: 'The Title',
     permalink: 'the-permalink',
-    raw_content: 'The content'
+    raw_content: 'The content',
+    published: true
   }}
 
   let(:user)    { FactoryGirl.create(:user) }

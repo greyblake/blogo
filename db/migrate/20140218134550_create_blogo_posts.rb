@@ -6,11 +6,14 @@ class CreateBlogoPosts < ActiveRecord::Migration
       t.integer  :user_id      , null: false
       t.string   :permalink    , null: false
       t.string   :title        , null: false
+      t.boolean  :published    , null: false
+      t.datetime :published_at , null: false
+
+      t.string   :markup_lang  , null: false
       t.text     :raw_content  , null: false
+
       t.text     :html_content , null: false
       t.text     :html_overiew , null: true
-      t.boolean  :published    , null: false, default: false
-      t.datetime :published_at , null: false
 
       t.string   :tags_string      , null: true
       t.string   :meta_description , null: false
