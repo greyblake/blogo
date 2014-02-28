@@ -15,7 +15,7 @@
     <%= f.text_field :permalink, class: 'pure-input-1', required: true, id: 'permalink', placeholder: 'unique-permalink' %>
 
     <%= f.label :published_at, 'Published on' %>
-    <%= f.date_field :published_at, class: 'pure-input-1', id: 'input-datepicker', placeholder: 'Today' %>
+    <%= f.text_field :published_at, class: 'pure-input-1', id: 'input-datepicker', placeholder: 'Today' %>
 
     <%= f.label :published, class: 'pure-checkbox' do %>
       <%= f.check_box :published %>
@@ -44,7 +44,10 @@
 
 <script>
   jQuery(function(){
-    new Pikaday({ field: document.getElementById('input-datepicker') });
+    new Pikaday({
+      field: document.getElementById('input-datepicker'),
+      format: 'YYYY-MM-DD'
+    });
 
     $('#post-title').titleToUrl('#permalink')
 
