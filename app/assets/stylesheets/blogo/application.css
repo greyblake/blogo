@@ -2,4 +2,5 @@
  *= require ./pure-min
  *= require ./common
  *= require ./admin
+ *= require blogo/modal
  */

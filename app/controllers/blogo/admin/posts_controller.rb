@@ -52,6 +52,14 @@ module Blogo::Admin
       redirect_to admin_posts_path
     end
 
+    def preview
+      @post = Blogo::PreviewPostService.new(blogo_current_user, post_params).preview
+
+      @meta = {title: @post.title }
+      @tags = Blogo::Tag.all
+      render 'blogo/posts/show', layout: 'blogo/application'
+    end
+
 
     private
 

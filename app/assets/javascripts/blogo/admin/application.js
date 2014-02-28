@@ -7,4 +7,7 @@
 //= require jquery
 //= require jquery_ujs
 //
+//= require blogo/modal
+//
 //= require_tree ./helpers
+//= require ./helpers/post_preview

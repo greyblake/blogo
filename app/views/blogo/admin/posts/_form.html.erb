@@ -28,11 +28,27 @@
 </div>
 
 <br />
-<%= submit_tag "Save", class: 'pure-button button-success' %>
-<%= submit_tag "Preview", class: 'pure-button button-secondary' %>
+<%= f.button "Save" , class: 'pure-button button-success', id: 'button-save' %>
+<%= f.button "Preview" , class: 'pure-button button-secondary', id: 'button-preview' %>
+
+
+<section class="semantic-content" id="modal-preview" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+  <div class="modal-inner">
+    <header id="modal-label">
+      <h1>Preview. Press ESC to back.</h1>
+    </header>
+    <div class="modal-content"><iframe></iframe></div>
+  </div>
+  <a href="#!" class="modal-close" title="Close preview" data-close="Close" data-dismiss="modal">×</a>
+</section>
 
 
 
 <script>
-  jQuery('#post-title').titleToUrl('#permalink')
+  jQuery(function(){
+    $('#post-title').titleToUrl('#permalink')
+
+    var preview = new PostPreview('button-preview', 'post-form', '<%= admin_post_preview_path %>', 'modal-preview');
+    preview.init();
+  })
 </script>
