@@ -14,8 +14,8 @@ end
 
 
 namespace :blogo do
-  desc 'Create admin user'
-  task :create_admin, [:name, :email, :password] => :environment do |task, args|
+  desc 'Create blog user'
+  task :create_user, [:name, :email, :password] => :environment do |task, args|
     attrs = args.to_hash
     attrs[:password_confirmation] = attrs[:password]
     Blogo::User.create!(attrs)
