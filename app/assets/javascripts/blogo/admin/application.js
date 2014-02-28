@@ -8,6 +8,5 @@
 //= require jquery_ujs
 //
 //= require blogo/modal
-//
+//= require blogo/pikaday
 //= require_tree ./helpers
-//= require ./helpers/post_preview

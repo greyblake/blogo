@@ -6,7 +6,7 @@
   <td><%= link_to post.title, edit_admin_post_path(post) %></td>
   <td><%= post.status %></td>
   <td><%= post.user.name %></td>
-  <td><%= post.published_at %></td>
+  <td><%= post.published_at.to_date %></td>
   <td>
     <%= link_to 'edit', edit_admin_post_path(post), class: "pure-button  button-secondary" %>
     <%= link_to 'delete', admin_post_path(post), method: :delete, data: {confirm: confirm_message}, class: "pure-button  button-warning" %>
