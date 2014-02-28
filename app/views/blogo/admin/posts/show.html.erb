@@ -1,5 +1,0 @@
-<% confirm_message = %Q'Are you sure you want to delete "#{@post.title}"?' %>
-<%= link_to 'edit', edit_admin_post_path(@post), class: "pure-button  button-secondary" %>
-<%= link_to 'delete', admin_post_path(@post), method: :delete, data: {confirm: confirm_message}, class: "pure-button  button-warning" %>
-
-<%= render 'blogo/shared/post' %>

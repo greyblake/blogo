@@ -1,3 +1,5 @@
+<h1 class="admin-header">Edit post</h1>
+
 <%= blogo_form_for [:admin, @post], method: :patch, html: {id: 'post-form', class: 'pure-form pure-form-stacked'} do |f| %>
   <%= render partial: 'form', locals: {f: f} %>
 <% end %>

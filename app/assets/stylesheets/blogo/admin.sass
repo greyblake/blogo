@@ -1,11 +1,18 @@
+/*
+ *= require blogo/pure-min
+ *= require ./admin
+ *= require blogo/modal
+ */
+
 $link-color: #286790
 
-#recent-comments
-  a
-    color: $link-color
+a
+  color: $link-color
 
 #admin-container
   background: #fff
+  margin: 20px
+  display: block
 
 #modal-preview
   width: 100%
@@ -61,7 +68,8 @@ $link-color: #286790
   margin-bottom: 10px
 
 .admin-header
-  color: #666
+  color: #888
+  font-size: 18px
 
 
 .alert
@@ -82,3 +90,16 @@ $link-color: #286790
   background: #fff0f0
 
 
+.button-secondary, .button-warning, .button-success
+  color: white
+  border-radius: 4px
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2)
+
+.button-secondary
+  background: rgb(66, 184, 221)
+
+.button-warning
+  background: rgb(223, 117, 20)
+
+.button-success
+  background: rgb(28, 184, 65)

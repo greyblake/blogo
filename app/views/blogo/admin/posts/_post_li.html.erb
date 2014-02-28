@@ -3,7 +3,7 @@
 %>
 
 <tr>
-  <td><%= link_to post.title, admin_post_path(post) %></td>
+  <td><%= link_to post.title, edit_admin_post_path(post) %></td>
   <td><%= post.status %></td>
   <td><%= post.user.name %></td>
   <td><%= post.published_at %></td>

@@ -9,7 +9,7 @@ Blogo::Engine.routes.draw do
     patch '/posts/preview' => 'posts#preview'
 
     resources :sessions, only: %i(new create destroy)
-    resources :posts
+    resources :posts, except: %i(show)
     resources :users
     resources 'comments', only: %w(index)
     resources 'images'  , only: %w(create)

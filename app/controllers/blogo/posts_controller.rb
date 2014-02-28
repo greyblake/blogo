@@ -1,6 +1,6 @@
 module Blogo
   class PostsController < ApplicationController
-    layout 'blogo/application'
+    layout 'blogo/blog'
 
     # Number of posts shown in feed.
     FEED_POSTS_LIMIT = 20

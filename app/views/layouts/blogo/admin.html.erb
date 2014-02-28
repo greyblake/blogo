@@ -8,7 +8,7 @@
     <%= javascript_include_tag "blogo/admin/ckeditor" %>
   <% end %>
 
-  <%= stylesheet_link_tag "blogo/application" %>
+  <%= stylesheet_link_tag "blogo/admin" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -19,13 +19,11 @@
   <% end %>
 
   <div id="admin-container">
-    <div id="content">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, id: "flash_#{name}", class: (name == :notice ? "alert alert-info" : "alert alert-error") %>
-      <% end %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}", class: (name == :notice ? "alert alert-info" : "alert alert-error") %>
+    <% end %>
 
-      <%= yield %>
-    <div id="main">
+    <%= yield %>
   </div>
 </body>
 </html>

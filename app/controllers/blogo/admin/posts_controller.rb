@@ -22,12 +22,6 @@ module Blogo::Admin
       end
     end
 
-    def show
-      @post = Blogo::Post.find(params[:id])
-      @recent_posts = Blogo::Post.all
-      @tags = Blogo::Tag.all
-    end
-
     def edit
       @post = Blogo::Post.find(params[:id])
     end
@@ -57,7 +51,7 @@ module Blogo::Admin
 
       @meta = {title: @post.title }
       @tags = Blogo::Tag.all
-      render 'blogo/posts/show', layout: 'blogo/application'
+      render 'blogo/posts/show', layout: 'blogo/blog'
     end
 
 
