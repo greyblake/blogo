@@ -14,6 +14,7 @@ module Blogo
     attr_accessor :disqus_shortname
     attr_accessor :twitter_username
     attr_accessor :github_username
+    attr_accessor :show_rss_icon
     attr_accessor :google_analytics_id
 
     attr_accessor :use_ckeditor
@@ -33,6 +34,7 @@ module Blogo
       @use_ckeditor        = true
       @keywords            = %w(blog)
       @markup_lang         = :html
+      @show_rss_icon       = true
     end
 
     def markup_lang=(lang)
