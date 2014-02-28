@@ -1,0 +1,11 @@
+<% if Blogo.config.twitter_username %>
+  <%= link_to '',"https://twitter.com/#{Blogo.config.twitter_username}", class: 'twitter-icon' %>
+<% end %>
+
+<% if Blogo.config.github_username %>
+  <%= link_to '',"https://github.com/#{Blogo.config.github_username}", class: 'github-icon' %>
+<% end %>
+
+<% if Blogo.config.github_username %>
+  <%= link_to '', feed_path, class: 'rss-icon' %>
+<% end %>

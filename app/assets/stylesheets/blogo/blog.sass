@@ -9,7 +9,7 @@ $link-color: #286790
 
 body
   background: #F3F3F3
-  background-image: image-url('blogo/bg5.png')
+  background-image: image-url('blogo/background.png')
 
 
 #content
@@ -47,13 +47,12 @@ body
     display: block
     color: #fff
     padding: 10px 25px
-    //border-bottom: 4px solid #aaa
     h1
       color: #fff
       font-size: 2em
       line-height: 1.5em
       margin: 4px 0px
-    &>h2
+    h2
       font-weight: 100
       margin: 3px 0px
       font-style: italic
@@ -70,13 +69,24 @@ body
         display: inline-block
         text-align: right
 
-    .rss-icon
-      display: block
+    .header-icons
+      text-align: right
+    .rss-icon, .twitter-icon, .github-icon
+      display: inline-block
       width: 48px
       height: 48px
+    .rss-icon
       background-image: image-url('blogo/rss-icon.png')
       &:hover
         background-image: image-url('blogo/rss-icon-active.png')
+    .twitter-icon
+      background-image: image-url('blogo/twitter-icon.png')
+      &:hover
+        background-image: image-url('blogo/twitter-icon-active.png')
+    .github-icon
+      background-image: image-url('blogo/github-icon.png')
+      &:hover
+        background-image: image-url('blogo/github-icon-active.png')
 
 
 .blogo-article

@@ -22,10 +22,12 @@
 
 <%# Twitter Card %>
 <meta name="twitter:card" content="summary">
-<%#<meta name="twitter:site" content="@publisher_handle">%>
-<%#<meta name="twitter:creator" content="@author_handle">%>
 <meta name="twitter:title" content="<%= @meta[:title] %>">
 <meta name="twitter:description" content="<%= @meta[:title] %>">
 <% if @meta[:image] %>
   <meta name="twitter:image" content="<%= @meta[:image] %>">
+<% end %>
+<% if Blogo.config.twitter_username %>
+  <meta name="twitter:site" content="@<%= Blogo.config.twitter_username %>">
+  <meta name="twitter:creator" content="@<%= Blogo.config.twitter_username %>">
 <% end %>

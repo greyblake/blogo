@@ -14,10 +14,16 @@
 <body>
   <div id="container">
     <header class="blogo-header">
-      <h1>
-        <%= link_to Blogo.config.site_title, root_path %>
-      </h1>
-      <h2><%= Blogo.config.site_subtitle %></h2>
+      <div class='header-titles'>
+        <h1>
+          <%= link_to Blogo.config.site_title, root_path %>
+        </h1>
+        <h2><%= Blogo.config.site_subtitle %></h2>
+      <div>
+
+      <div class='header-icons'>
+        <%= render partial: 'blogo/posts/icons' %>
+      </div>
     </header>
 
     <div id="content">
