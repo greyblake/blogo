@@ -4,19 +4,29 @@ Mountable blog engine for Ruby on Rails 4.
 
 ## How it looks like?
 
-Blog:
+<table cellspacing="0">
+    <thread>
+        <tr>
+            <th>Blog</th>
+            <th>Admin</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <td>
+                <a href="http://i1078.photobucket.com/albums/w484/greyblake/blogo_mountable_blog_rails_engine.png" target="blog">
+                    <img src="http://i1078.photobucket.com/albums/w484/greyblake/th_blogo_mountable_blog_rails_engine.png" border="0" title="Blogo - mountable blog engine for Ruby on Rails" alt="Blogo - mountable blog engine for Ruby on Rails" style=""></a>
+                </a>
+            </td>
+            <td>
+                <a href="http://i1078.photobucket.com/albums/w484/greyblake/blogo_admin_mountable_blog_rails_engine.png" target="admin">
+                    <img src="http://i1078.photobucket.com/albums/w484/greyblake/th_blogo_admin_mountable_blog_rails_engine.png" border="0" title="Blogo - mountable blog engine for Ruby on Rails(admin)" alt="Blogo - mountable blog engine for Ruby on Rails" style=""></a>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-<a href="http://i1078.photobucket.com/albums/w484/greyblake/blogo_mountable_blog_rails_engine.png" target="_blank">
-    <img src="http://i1078.photobucket.com/albums/w484/greyblake/th_blogo_mountable_blog_rails_engine.png" border="0" title="Blogo - mountable blog engine for Ruby on Rails" alt="Blogo - mountable blog engine for Ruby on Rails" style=""></a>
-</a>
-
-
-
-Admin:
-
-<a href="http://i1078.photobucket.com/albums/w484/greyblake/blogo_admin_mountable_blog_rails_engine.png" target="_blank">
-    <img src="http://i1078.photobucket.com/albums/w484/greyblake/th_blogo_admin_mountable_blog_rails_engine.png" border="0" title="Blogo - mountable blog engine for Ruby on Rails(admin)" alt="Blogo - mountable blog engine for Ruby on Rails" style=""></a>
-</a>
 
 ## Quick start
 

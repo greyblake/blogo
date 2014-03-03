@@ -2,9 +2,9 @@ PATH
   remote: .
   specs:
     blogo (0.0.1)
-      bcrypt-ruby
-      rails (~> 4.0.0)
-      sass-rails
+      bcrypt-ruby (~> 3.0)
+      rails (~> 4.0)
+      sass-rails (~> 4.0)
 
 GEM
   remote: https://rubygems.org/
