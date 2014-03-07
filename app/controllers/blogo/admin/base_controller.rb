@@ -8,7 +8,7 @@ module Blogo::Admin
     private
 
     def ensure_authenticated!
-      redirect_to admin_login_path unless blogo_current_user
+      redirect_to blogo_admin_login_path unless blogo_current_user
     end
 
     def blogo_current_user

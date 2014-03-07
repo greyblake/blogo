@@ -1,6 +1,7 @@
 # v0.0.3
 
 * [feature] Make migrations be aware of Foreigner: use foreign keys if possible (greyblake)
+* [fixed] Fixed admin login/logout routes (greyblake)
 
 
 # v0.0.2 2014-03-08

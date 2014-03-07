@@ -9,7 +9,7 @@ module Blogo::Admin
       user = Blogo::User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
         session[:blogo_user_id] = user.id
-        redirect_to admin_url, notice: "You have logged in"
+        redirect_to blogo_admin_url, notice: "You have logged in"
       else
         flash.now.alert = "Incorrect email or password"
         render "new"
@@ -18,7 +18,7 @@ module Blogo::Admin
 
     def destroy
       session[:blogo_user_id] = nil
-      redirect_to admin_url, notice: "You have logged out"
+      redirect_to blogo_admin_url, notice: "You have logged out"
     end
   end
 end
