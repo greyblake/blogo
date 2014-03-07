@@ -2,6 +2,9 @@
 
 Mountable blog engine for Ruby on Rails 4.
 
+[![Build Status](https://travis-ci.org/greyblake/blogo.png?branch=master)](https://travis-ci.org/greyblake/blogo)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/greyblake/blogo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 ## How it looks like?
 
 <table cellspacing="0">
