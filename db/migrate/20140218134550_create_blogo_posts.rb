@@ -1,8 +1,8 @@
 class CreateBlogoPosts < ActiveRecord::Migration
   def change
-    table_name = "#{Blogo.table_name_prefix}posts"
+    posts_table = "#{Blogo.table_name_prefix}posts"
 
-    create_table(table_name) do |t|
+    create_table(posts_table) do |t|
       t.integer  :user_id      , null: false
       t.string   :permalink    , null: false
       t.string   :title        , null: false
@@ -22,8 +22,13 @@ class CreateBlogoPosts < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index table_name, :user_id
-    add_index table_name, :permalink, unique: true
-    add_index table_name, :published_at
+    add_index posts_table, :user_id
+    add_index posts_table, :permalink, unique: true
+    add_index posts_table, :published_at
+
+    if defined?(Foreigner)
+      users_table = "#{Blogo.table_name_prefix}users"
+      add_foreign_key posts_table, users_table, column: :user_id
+    end
   end
 end

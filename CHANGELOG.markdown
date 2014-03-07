@@ -1,3 +1,8 @@
+# v0.0.3
+
+* [feature] Make migrations be aware of Foreigner: use foreign keys if possible (greyblake)
+
+
 # v0.0.2 2014-03-08
 
 * [changed] Routes are moved to Blogo::Routes and must be mounted with `Blogo::Routes.mount_to` method (greyblake)

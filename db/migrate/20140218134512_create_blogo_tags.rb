@@ -1,13 +1,13 @@
 class CreateBlogoTags < ActiveRecord::Migration
   def change
-    table_name = "#{Blogo.table_name_prefix}tags"
+    tags_table = "#{Blogo.table_name_prefix}tags"
 
-    create_table(table_name) do |t|
+    create_table(tags_table) do |t|
       t.string :name, null: false
 
       t.timestamps
     end
 
-    add_index table_name, :name, unique: true
+    add_index tags_table, :name, unique: true
   end
 end
