@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Blogo::Engine, at: '/blog'
+  Blogo::Routes.mount_to(self, at: '/blog')
 end

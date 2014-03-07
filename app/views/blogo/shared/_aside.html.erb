@@ -18,7 +18,7 @@
   </header>
   <div class="tags">
     <% @tags.each do |tag| %>
-      <%= link_to tag.name, tag_path(tag), class: 'tag pure-button button-secondary' %>
+      <%= link_to tag.name, blogo_tag_path(tag), class: 'tag pure-button button-secondary' %>
     <% end %>
   <div>
 </aside>

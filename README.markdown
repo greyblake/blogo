@@ -46,8 +46,8 @@ bundle install
 Install blogo migrations and run them:
 
 ```
-  bundle exec rake blogo:install:migrations
-  bundle exec rake db:migrate
+  rake blogo:install:migrations
+  rake db:migrate
 ```
 
 
@@ -57,10 +57,10 @@ Create a user:
 rake blogo:create_user[user_name,user@email.com,password]
 ```
 
-Mount the blog engine to you rails application in `config/routes.rb`:
+Mount the blog routes to you rails application in `config/routes.rb`
 
 ```
-  mount Blogo::Engine, at: '/blog'
+  Blogo::Routes.mount_to(self, at: '/blog')
 ```
 
 Run the rails application and go to http://localhost:3000/blog/admin to create you first post!

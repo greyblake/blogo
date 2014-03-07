@@ -3,10 +3,6 @@ require 'spec_helper'
 describe Blogo::PostsController do
   render_views
 
-  before do
-    @routes = Blogo::Engine.routes
-  end
-
   describe '#index' do
     it 'assigns @meta' do
       get :index

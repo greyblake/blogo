@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Blogo::Admin::ImagesController do
   before do
-    @routes = Blogo::Engine.routes
     admin_login
   end
 

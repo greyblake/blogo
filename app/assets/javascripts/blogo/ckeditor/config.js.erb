@@ -32,7 +32,7 @@ CKEDITOR.editorConfig = function( config ) {
   config.extraPlugins = 'wpmore';
 
   // URL to upload images with image plugin
-  config.filebrowserUploadUrl = '<%= Blogo::Engine.routes.url_helpers.admin_images_path %>';
+  config.filebrowserUploadUrl = '<%= Rails.application.routes.url_helpers.blogo_admin_images_path %>';
 
   // Height
   config.height = '350px';

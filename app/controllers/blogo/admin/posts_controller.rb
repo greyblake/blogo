@@ -15,7 +15,7 @@ module Blogo::Admin
       if service.create!
         @post = service.post
         flash[:notice] = "The post is created"
-        redirect_to admin_posts_path
+        redirect_to blogo_admin_posts_path
       else
         @post = service.post
         render 'new'
@@ -32,7 +32,7 @@ module Blogo::Admin
 
       if service.update!
         flash[:notice] = "The post is updated"
-        redirect_to admin_posts_path
+        redirect_to blogo_admin_posts_path
       else
         render 'edit'
       end
@@ -43,7 +43,7 @@ module Blogo::Admin
       Blogo::DestroyPostService.new(post).destroy!
 
       flash[:notice] = "The post is removed"
-      redirect_to admin_posts_path
+      redirect_to blogo_admin_posts_path
     end
 
     def preview

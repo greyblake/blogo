@@ -2,6 +2,7 @@ require 'blogo/version'
 require 'blogo/errors'
 require 'blogo/engine'
 require 'blogo/config'
+require 'blogo/routes'
 
 require 'blogo/renderer'
 require 'blogo/paginator'
