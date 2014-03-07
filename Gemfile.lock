@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    blogo (0.0.1)
+    blogo (0.0.2)
       bcrypt-ruby (~> 3.0)
       rails (~> 4.0)
       sass-rails (~> 4.0)
