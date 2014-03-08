@@ -1,3 +1,7 @@
+# v0.0.4 2014-03-08
+
+* [changed] Use `public/system/blog/images` directory for uploaded images (greyblake)
+
 # v0.0.3 2014-03-08
 
 * [feature] Make migrations be aware of Foreigner: use foreign keys if possible (greyblake)
