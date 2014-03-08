@@ -6,7 +6,7 @@ module Blogo::Admin
     layout false
 
     # Directory in public with blog images
-    IMAGE_DIRECTORY = 'blog/images'
+    IMAGE_DIRECTORY = 'system/blog/images'
 
     # POST /admin/images
     #

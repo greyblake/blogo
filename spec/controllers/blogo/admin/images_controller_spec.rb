@@ -7,17 +7,17 @@ describe Blogo::Admin::ImagesController do
 
   # Remove uploads
   after do
-    FileUtils.rm_rf File.join(Rails.application.root, 'public/blog')
+    FileUtils.rm_rf File.join(Rails.application.root, 'public/system/blog')
   end
 
   def image_path(name)
     date_dir = Time.now.strftime('%Y/%m')
-    File.join('/blog/images/', date_dir, name)
+    File.join('/system/blog/images/', date_dir, name)
   end
 
   def image_file_path(name)
     date_dir = Time.now.strftime('%Y/%m')
-    File.join(Rails.application.root, '/public/blog/images/', date_dir, name)
+    File.join(Rails.application.root, 'public/system/blog/images', date_dir, name)
   end
 
 
