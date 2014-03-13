@@ -11,10 +11,11 @@ module Blogo
       set_paginator
 
       @meta = {}
-      @meta[:title]     = "#{Blogo.config.site_title} - #{Blogo.config.site_subtitle}"
-      @meta[:site_name] = Blogo.config.site_title
-      @meta[:keywords]  = Blogo.config.keywords
-      @meta[:type]      = 'website'
+      @meta[:canonical_url] = blogo_root_url
+      @meta[:title]         = "#{Blogo.config.site_title} - #{Blogo.config.site_subtitle}"
+      @meta[:site_name]     = Blogo.config.site_title
+      @meta[:keywords]      = Blogo.config.keywords
+      @meta[:type]          = 'website'
     end
 
     def show
@@ -22,13 +23,14 @@ module Blogo
       set_vars
 
       @meta = {}
-      @meta[:title]       = "#{@post.title} - #{Blogo.config.site_title}"
-      @meta[:description] = @post.meta_description
-      @meta[:keywords]    = [@post.tags_string, Blogo.config.keywords].flatten.join(", ")
-      @meta[:url]         = request.url
-      @meta[:image]       = meta_image
-      @meta[:type]        = 'article'
-      @meta[:site_name]   = Blogo.config.site_title
+      @meta[:canonical_url] = blogo_post_url(@post.permalink)
+      @meta[:title]         = "#{@post.title} - #{Blogo.config.site_title}"
+      @meta[:description]   = @post.meta_description
+      @meta[:keywords]      = [@post.tags_string, Blogo.config.keywords].flatten.join(", ")
+      @meta[:url]           = request.url
+      @meta[:image]         = meta_image
+      @meta[:type]          = 'article'
+      @meta[:site_name]     = Blogo.config.site_title
     end
 
     def feed
