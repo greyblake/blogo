@@ -1,3 +1,7 @@
+# v0.0.6 2014-03-13
+
+* [fixed] Make canonical URL do not cause error (greyblake)
+
 # v0.0.5 2014-03-13
 
 * [feature] Add canonical URL (greyblake)
