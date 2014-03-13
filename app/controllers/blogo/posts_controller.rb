@@ -11,7 +11,6 @@ module Blogo
       set_paginator
 
       @meta = {}
-      @meta[:canonical_url] = blogo_root_url
       @meta[:title]         = "#{Blogo.config.site_title} - #{Blogo.config.site_subtitle}"
       @meta[:site_name]     = Blogo.config.site_title
       @meta[:keywords]      = Blogo.config.keywords
@@ -23,7 +22,6 @@ module Blogo
       set_vars
 
       @meta = {}
-      @meta[:canonical_url] = blogo_post_url(@post.permalink)
       @meta[:title]         = "#{@post.title} - #{Blogo.config.site_title}"
       @meta[:description]   = @post.meta_description
       @meta[:keywords]      = [@post.tags_string, Blogo.config.keywords].flatten.join(", ")
