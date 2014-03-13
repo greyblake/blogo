@@ -1,3 +1,8 @@
+# v0.0.5 2014-03-13
+
+* [feature] Add canonical URL (greyblake)
+* [feature] Add links for social sharing (greyblake)
+
 # v0.0.4 2014-03-08
 
 * [changed] Use `public/system/blog/images` directory for uploaded images (greyblake)
