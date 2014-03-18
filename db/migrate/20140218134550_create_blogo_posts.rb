@@ -13,7 +13,7 @@ class CreateBlogoPosts < ActiveRecord::Migration
       t.text     :raw_content  , null: false
 
       t.text     :html_content , null: false
-      t.text     :html_overiew , null: true
+      t.text     :html_overview, null: true
 
       t.string   :tags_string      , null: true
       t.string   :meta_description , null: false
@@ -26,6 +26,7 @@ class CreateBlogoPosts < ActiveRecord::Migration
     add_index posts_table, :permalink, unique: true
     add_index posts_table, :published_at
 
+    # NOTE: respond_to?(:add_foreign_key) does not work
     if defined?(Foreigner)
       users_table = "#{Blogo.table_name_prefix}users"
       add_foreign_key posts_table, users_table, column: :user_id

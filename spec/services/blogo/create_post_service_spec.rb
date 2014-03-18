@@ -20,7 +20,7 @@ describe Blogo::CreatePostService do
       expect(post.permalink).to eq 'the-permalink'
       expect(post.raw_content).to eq 'The content'
       expect(post.html_content).to eq 'The content'
-      expect(post.html_overiew).to be_nil
+      expect(post.html_overview).to be_nil
     end
 
     describe 'with tags' do
@@ -59,12 +59,12 @@ describe Blogo::CreatePostService do
         params[:raw_content] = 'Prelude... <!--more--> The content'
       end
 
-      it 'sets html_overiew' do
+      it 'sets html_overview' do
         expect(service.create!).to be_true
         post = user.posts.last
 
         expect(post.html_content).to eq 'Prelude...  The content'
-        expect(post.html_overiew).to eq 'Prelude... '
+        expect(post.html_overview).to eq 'Prelude... '
       end
     end
   end

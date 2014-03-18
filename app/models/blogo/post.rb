@@ -37,7 +37,7 @@ class Blogo::Post < ActiveRecord::Base
   #
   # @return [void]
   def set_meta_description
-    html = html_overiew || html_content
+    html = html_overview || html_content
 
     self.meta_description =
       html.gsub(/<\/?[^>]*>/, ' ').  # replace HTML tags with spaces

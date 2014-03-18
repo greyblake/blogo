@@ -52,7 +52,7 @@ describe Blogo::Admin::PostsController do
         expect(new_post.published_at).to eq DateTime.new(2013, 01, 01, 07, 45)
         expect(new_post.raw_content).to eq 'Do you like Vim?<!--more--> I do!'
         expect(new_post.html_content).to eq 'Do you like Vim? I do!'
-        expect(new_post.html_overiew).to eq 'Do you like Vim?'
+        expect(new_post.html_overview).to eq 'Do you like Vim?'
         expect(new_post).not_to be_published
         expect(new_post.tag_names).to eq ['ruby', 'vim']
         expect(new_post.tags.map(&:name)).to match_array(['ruby', 'vim'])

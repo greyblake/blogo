@@ -42,10 +42,10 @@ module Blogo
       overview, rest = @post.raw_content.split(JUMP_BREAK, 2)
 
       if rest.present?
-        @post.html_overiew = renderer.render(overview)
+        @post.html_overview = renderer.render(overview)
         @post.html_content = renderer.render(overview + rest)
       else
-        @post.html_overiew = nil
+        @post.html_overview = nil
         @post.html_content = renderer.render(@post.raw_content)
       end
     end

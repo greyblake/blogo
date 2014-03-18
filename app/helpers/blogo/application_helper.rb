@@ -36,7 +36,7 @@ module Blogo
     #
     # @return [String]
     def post_overview(post)
-      post.html_overiew ? post.html_overiew : post.html_content
+      post.html_overview ? post.html_overview : post.html_content
     end
   end
 end
