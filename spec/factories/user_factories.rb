@@ -2,7 +2,12 @@ FactoryGirl.define do
   factory :user, class: Blogo::User do
     name "Ludoviko Zamenhofo"
     sequence(:email) { |n| "ludoviko#{n}@eo.com" }
-    password              "sekreto"
-    password_confirmation "sekreto"
+
+    ignore { password 'sekreto' }
+
+    after(:build) do |user, evaluator|
+      user.password              = evaluator.password
+      user.password_confirmation = evaluator.password
+    end
   end
 end

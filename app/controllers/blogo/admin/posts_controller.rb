@@ -1,14 +1,21 @@
 module Blogo::Admin
+  # Responsible for posts management: creation, editing, deletion, preview.
   class PostsController < BaseController
 
+    # GET /admin/posts
+    #
     def index
       @posts = Blogo::Post.all
     end
 
+    # GET /admin/posts/new
+    #
     def new
       @post = Blogo::Post.new(published: true)
     end
 
+    # POST /admin/posts
+    #
     def create
       service = Blogo::CreatePostService.new(blogo_current_user, post_params)
 
@@ -22,10 +29,14 @@ module Blogo::Admin
       end
     end
 
+    # GET /admin/posts/:id/edit
+    #
     def edit
       @post = Blogo::Post.find(params[:id])
     end
 
+    # PATCH /admin/posts/:id
+    #
     def update
       @post = Blogo::Post.find(params[:id])
       service = Blogo::UpdatePostService.new(@post, post_params)
@@ -38,6 +49,8 @@ module Blogo::Admin
       end
     end
 
+    # DELETE /admin/posts/:id
+    #
     def destroy
       post = Blogo::Post.find(params[:id])
       Blogo::DestroyPostService.new(post).destroy!
@@ -46,6 +59,8 @@ module Blogo::Admin
       redirect_to blogo_admin_posts_path
     end
 
+    # POST /admin/posts/preview
+    #
     def preview
       @post = Blogo::PreviewPostService.new(blogo_current_user, post_params).preview
 
@@ -57,6 +72,9 @@ module Blogo::Admin
 
     private
 
+    # Get post parameters from params.
+    #
+    # @return [Hash]
     def post_params
       params.require(:post).permit(:title, :permalink, :published_at, :raw_content, :published, :tags_string)
     end

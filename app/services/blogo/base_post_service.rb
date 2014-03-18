@@ -36,9 +36,11 @@ module Blogo
     end
 
     def render_and_set_content!
-      renderer = Blogo::Renderer.get(Blogo.config.markup_lang)
+      return unless @post.raw_content
 
+      renderer = Blogo::Renderer.get(Blogo.config.markup_lang)
       overview, rest = @post.raw_content.split(JUMP_BREAK, 2)
+
       if rest.present?
         @post.html_overiew = renderer.render(overview)
         @post.html_content = renderer.render(overview + rest)
