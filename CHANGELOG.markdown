@@ -1,3 +1,9 @@
+# v0.0.7 2014-03-19
+
+* [changed, fixed] Rename column with typo html_overiew -> html_overview (greyblake)
+* [feature] Add good test coverage (greyblake)
+* [changed] Number of partial templates were rearranged (greyblake)
+
 # v0.0.6 2014-03-13
 
 * [fixed] Make canonical URL do not cause error (greyblake)
