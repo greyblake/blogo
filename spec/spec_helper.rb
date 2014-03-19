@@ -16,6 +16,8 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 # Load factories
 Dir["#{File.dirname(__FILE__)}/factories/*.rb"].each { |f| require f }
 
+Capybara.javascript_driver = :webkit
+
 RSpec.configure do |config|
   config.mock_with :rspec
   config.use_transactional_fixtures = true

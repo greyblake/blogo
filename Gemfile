@@ -14,4 +14,7 @@ group :test do
   gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'capybara'
+
+  gem 'jquery-rails'
+  gem 'coffee-rails'
 end
