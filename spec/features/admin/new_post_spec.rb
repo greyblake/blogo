@@ -1,19 +1,9 @@
 require 'spec_helper'
 
 describe 'New Post' do
-  before do
-    FactoryGirl.create(:user, email: 'admin@mail.com', password: 'sekreto')
-
-    visit blogo_admin_login_path
-
-    fill_in 'email'   , with: 'admin@mail.com'
-    fill_in 'password', with: 'sekreto'
-    click_button 'Login'
-
-    expect(current_path).to eq blogo_admin_path
-  end
-
   it 'creates a new post' do
+    login!
+    expect(current_path).to eq blogo_admin_path
     click_link "New Post"
 
     fill_in 'post[title]'       , with: 'The New Post'

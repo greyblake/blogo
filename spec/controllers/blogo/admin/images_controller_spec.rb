@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe Blogo::Admin::ImagesController do
-  before do
-    admin_login
-  end
+  before { login! }
 
   # Remove uploads
   after do

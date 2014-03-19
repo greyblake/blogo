@@ -23,25 +23,6 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false
 
-  def admin_login
-    user = FactoryGirl.create(:user)
-    session[:blogo_user_id] = user.id
-  end
-
-  def fixture_image(name)
-    File.join(Blogo::Engine.root, 'spec/fixtures/images', name)
-  end
-
-  def login_as(user)
-    session[:blogo_user_id] = user.id
-  end
-
-  def login!
-    user = FactoryGirl.create(:user)
-    login_as(user)
-  end
-
-  def logout!
-    session[:blogo_user_id] = nil
-  end
+  config.include ControllerHelpers, type: :controller
+  config.include FeatureHelpers   , type: :feature
 end
