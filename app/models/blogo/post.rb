@@ -31,6 +31,11 @@ class Blogo::Post < ActiveRecord::Base
   end
 
 
+  def to_param
+    permalink
+  end
+
+
   private
 
   # Filter html content to get plain text and set first 200 characters as meta_description.

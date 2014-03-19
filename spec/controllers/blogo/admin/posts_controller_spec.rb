@@ -77,7 +77,7 @@ describe Blogo::Admin::PostsController do
   describe '#edit' do
     it 'sets @post' do
       blog_post  = FactoryGirl.create(:post)
-      get :edit, id: blog_post.id
+      get :edit, id: blog_post.permalink
 
       expect(response).to be_ok
       expect(assigns(:post)).to eq blog_post
@@ -89,7 +89,7 @@ describe Blogo::Admin::PostsController do
 
     context 'params are valid' do
       it 'updates post' do
-        post :update, id: blog_post.id, post: {title: 'Lernu Esperanton!'}
+        post :update, id: blog_post.permalink, post: {title: 'Lernu Esperanton!'}
 
         expect(response).to redirect_to blogo_admin_posts_path
         expect(flash[:notice]).to eq 'The post is updated'
@@ -101,7 +101,7 @@ describe Blogo::Admin::PostsController do
 
     context 'params are invalid' do
       it 'does not update post' do
-        post :update, id: blog_post.id, post: {title: ''}
+        post :update, id: blog_post.permalink, post: {title: ''}
 
         expect(response).to be_ok
         expect(assigns(:post).errors).not_to be_empty

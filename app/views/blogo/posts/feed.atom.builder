@@ -4,8 +4,8 @@ atom_feed do |feed|
   feed.updated  @updated
 
   @posts.each do |post|
-    feed.entry(post, url: url_to_post(post)) do |entry|
-      entry.url     url_to_post(post)
+    feed.entry(post, url: blogo_post_url(post)) do |entry|
+      entry.url     blogo_post_url(post)
       entry.title   post.title
       entry.content post_overview(post), :type => 'html'
       entry.updated post.updated_at.strftime("%Y-%m-%dT%H:%M:%SZ")

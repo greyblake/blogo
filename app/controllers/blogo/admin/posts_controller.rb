@@ -32,13 +32,13 @@ module Blogo::Admin
     # GET /admin/posts/:id/edit
     #
     def edit
-      @post = Blogo::Post.find(params[:id])
+      @post = Blogo::Post.where(permalink: params[:id]).first!
     end
 
     # PATCH /admin/posts/:id
     #
     def update
-      @post = Blogo::Post.find(params[:id])
+      @post = Blogo::Post.where(permalink: params[:id]).first!
       service = Blogo::UpdatePostService.new(@post, post_params)
 
       if service.update!

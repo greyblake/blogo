@@ -1,14 +1,6 @@
 require 'spec_helper'
 
 describe Blogo::ApplicationHelper do
-  describe '#path_to_post' do
-    it 'generates path to post with year' do
-      post = FactoryGirl.create(:post, permalink: 'new-year')
-      expect(helper).to receive(:blogo_post_path).with(permalink: 'new-year')
-      helper.path_to_post(post)
-    end
-  end
-
   describe '#path_to_page' do
     it 'generates path to page' do
       expect(helper).to receive(:blogo_page_path).with(10)

@@ -3,19 +3,6 @@ module Blogo
   module ApplicationHelper
     include Rails.application.routes.url_helpers
 
-    # Path to a post with year prefix.
-    #
-    # @param post [Blogo::Post]
-    #
-    # @return [String]
-    def path_to_post(post)
-      blogo_post_path(:permalink => post.permalink)
-    end
-
-    def url_to_post(post)
-      blogo_post_url(:permalink => post.permalink)
-    end
-
     # Path to a page or a page in scope of a particular tag.
     #
     # @param page [Integer]
