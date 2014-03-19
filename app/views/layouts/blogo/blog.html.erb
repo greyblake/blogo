@@ -4,7 +4,7 @@
   <title><%= @meta[:title] %></title>
   <meta charset="UTF-8">
 
-  <%= render partial: 'blogo/posts/meta' %>
+  <%= render partial: 'blogo/shared/meta' %>
 
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag "blogo/blog" %>
@@ -21,7 +21,7 @@
       </div>
 
       <div class='header-icons'>
-        <%= render partial: 'blogo/posts/icons' %>
+        <%= render partial: 'blogo/shared/social_icons' %>
       </div>
     </header>
 
