@@ -2,6 +2,7 @@ module Blogo
   class Config
     attr_accessor :site_title
     attr_accessor :site_subtitle
+    attr_accessor :read_btn_text
 
     attr_accessor :table_name_prefix
 
@@ -25,6 +26,7 @@ module Blogo
     def initialize
       @site_title          = 'Blogo'
       @site_subtitle       = 'Mountable blog engine for Ruby on Rails'
+      @read_btn_text       = 'Read ➞'
       @table_name_prefix   = 'blogo_'
       @posts_per_page      = 10
       @paginator_size      = 5
