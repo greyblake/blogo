@@ -130,6 +130,7 @@ describe Blogo::Admin::PostsController do
 
       expect(assigns(:meta)).to eq title: 'For Preview'
       expect(assigns(:tags)).not_to be_nil
+      expect(assigns(:recent_posts)).not_to be_nil
 
       preview_post = assigns(:post)
       expect(preview_post.title).to eq 'For Preview'

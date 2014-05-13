@@ -62,10 +62,11 @@ module Blogo::Admin
     # POST /admin/posts/preview
     #
     def preview
-      @post = Blogo::PreviewPostService.new(blogo_current_user, post_params).preview
+      @post         = Blogo::PreviewPostService.new(blogo_current_user, post_params).preview
+      @meta         = {title: @post.title }
+      @recent_posts = Blogo::Post.published.limit(Blogo.config.recent_posts) if Blogo.config.recent_posts
+      @tags         = Blogo::Tag.all
 
-      @meta = {title: @post.title }
-      @tags = Blogo::Tag.all
       render 'blogo/posts/show', layout: 'blogo/blog'
     end
 
