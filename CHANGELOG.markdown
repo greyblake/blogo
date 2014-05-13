@@ -1,3 +1,7 @@
+# v0.0.8 2014-05-13
+
+* [fixed] Fix post preview error (greyblake)
+
 # v0.0.7 2014-03-19
 
 * [changed, fixed] Rename column with typo html_overiew -> html_overview (greyblake)
