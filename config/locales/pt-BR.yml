@@ -6,3 +6,54 @@ pt-BR:
     read_post: 'Ler ➞'
     please_enable_javascript: 'Por favor, habilite o JavaScript para visualizar os comentários.'
     comments: 'Comentários'
+
+  admin:
+    add_new_post: 'Criar uma nova postagem'
+    title: 'Título'
+    status: 'Estado'
+    author: 'Autor'
+    published_on: 'Publicado em'
+    post_title: 'Título da Postagem'
+    tags_separated_with_commas: 'Tags separadas por vírgula'
+    unique_permalink: 'link-permanente-unico'
+    today: 'Hoje'
+    save_post_button: 'Salvar'
+    preview_post_button: 'Pré-visualizar'
+    preview_press_esc: 'Pré-visualização. Pressione ESC para voltar.'
+    modal_title_close_preview: 'Fechar a pré-visualização'
+    sign_out: 'Sair'
+    comments: 'Comentários'
+    new_post: 'Nova Postagem'
+    post_created: 'A postagem foi salva'
+    post_updated: 'A postagem foi atualizada'
+    post_removed: 'A postagem foi removida'
+    logged_in: 'Você está logado'
+    login_fail: 'Email ou senha incorreta'
+    logged_out: 'A sessão foi encerrada'
+    image_already_exists: 'Já existe uma imagem com o nome "%{image_name}"'
+    edit_post_button: 'editar'
+    delete_post_button: 'apagar'
+    posts: 'Postagens'
+    publish: 'Publicar'
+    edit_post: 'Editar postagem'
+    modal_confirm_delete_post: 'Tem certeza que deseja apagar "%{post_title}"?'
+
+  date:
+    formats:
+      default: '%d/%m/%Y'
+      long: '%d de %B de %Y'
+      short: '%d de %B'
+    month_names:
+      -
+      - Janeiro
+      - Fevereiro
+      - Março
+      - Abril
+      - Maio
+      - Junho
+      - Julho
+      - Agosto
+      - Setembro
+      - Outubro
+      - Novembro
+      - Dezembro

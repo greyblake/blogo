@@ -18,7 +18,7 @@ module Blogo::Admin
       file_path = Rails.root.join('public', image_directory, image_name)
 
       if File.exists?(file_path)
-        @error = "Image with name \"#{image_name}\" already exists"
+        @error = I18n.translate('admin.image_already_exists', image_name: image_name)
       else
         dir = File.dirname(file_path)
         FileUtils.mkdir_p(dir) unless File.exists?(dir)
