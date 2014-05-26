@@ -1,14 +1,14 @@
 <%= form_tag blogo_admin_sessions_path, class: 'pure-form pure-form-stacked' do %>
   <fieldset>
 
-    <legend>Login</legend>
+    <legend><%= t('admin.login') %></legend>
 
-    <%= label_tag :email %>
+    <%= label_tag :email, t('admin.email') %>
     <%= text_field_tag :email, params[:email] %>
 
-    <%= label_tag :password %>
+    <%= label_tag :password, t('admin.password') %>
     <%= password_field_tag :password %>
 
-    <%= submit_tag "Login", class: 'pure-button' %>
+    <%= submit_tag t('admin.login_button'), class: 'pure-button' %>
   <fieldset>
 <% end %>

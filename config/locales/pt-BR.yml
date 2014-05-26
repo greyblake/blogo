@@ -8,6 +8,10 @@ pt-BR:
     comments: 'Comentários'
 
   admin:
+    login: 'Login'
+    login_button: 'Entrar'
+    email: 'Email'
+    password: 'Senha'
     add_new_post: 'Criar uma nova postagem'
     title: 'Título'
     status: 'Estado'

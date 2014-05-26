@@ -8,6 +8,10 @@ en:
     comments: 'Comments'
 
   admin:
+    login: 'Login'
+    login_button: 'Login'
+    email: 'Email'
+    password: 'Password'
     add_new_post: 'Add a new post'
     title: 'Title'
     status: 'Status'
