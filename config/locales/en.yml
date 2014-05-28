@@ -27,6 +27,8 @@ en:
     password: 'Password'
     post_created: 'The post is created'
     post_removed: 'The post is removed'
+    post_status_draft: 'draft'
+    post_status_published: 'published'
     post_title: 'Post Title'
     post_updated: 'The post is updated'
     posts: 'Posts'

@@ -27,6 +27,8 @@ pt-BR:
     password: 'Senha'
     post_created: 'A postagem foi salva'
     post_removed: 'A postagem foi removida'
+    post_status_draft: 'rascunho'
+    post_status_published: 'publicado'
     post_title: 'Título da Postagem'
     post_updated: 'A postagem foi atualizada'
     posts: 'Postagens'

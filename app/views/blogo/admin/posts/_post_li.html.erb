@@ -4,7 +4,7 @@
 
 <tr>
   <td><%= link_to post.title, edit_blogo_admin_post_path(post) %></td>
-  <td><%= post.status %></td>
+  <td><%= t("admin.post_status_#{post.status}") %></td>
   <td><%= post.user.name %></td>
   <td><%= l(post.published_at.to_date) %></td>
   <td>
