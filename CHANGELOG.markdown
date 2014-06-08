@@ -1,3 +1,7 @@
+# v0.0.9 2014-06-08
+
+* [feature] Localization support: en, pt-BR (diegosouza)
+
 # v0.0.8 2014-05-13
 
 * [fixed] Fix post preview error (greyblake)

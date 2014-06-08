@@ -64,6 +64,7 @@ Go to http://localhost::3000/blog to take a look at your posts.
 * SEO optimized: generates meta description, keywords, meta tags for facebook([OpenGraph](http://ogp.me/)) and twitter
 * Can be customized for your own needs.
 * Very few external dependencies
+* Localization support
 
 
 ## Markup Formats
@@ -81,6 +82,7 @@ add necessary dependencies to your Gemfile manually.
 ## Credits
 
 * [Sergey Potapov](https://github.com/greyblake) - creator and maintainer
+* [Diego Souza](https://github.com/diegosouza) - I18n support
 
 ## License
 
