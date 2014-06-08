@@ -1,4 +1,4 @@
-<h1 class="admin-header"><%= t('admin.edit_post') %></h1>
+<h1 class="admin-header"><%= t('blogo.admin.edit_post') %></h1>
 
 <%= blogo_form_for [:blogo, :admin, @post], method: :patch, html: {id: 'post-form', class: 'pure-form pure-form-stacked'} do |f| %>
   <%= render partial: 'form', locals: {f: f} %>

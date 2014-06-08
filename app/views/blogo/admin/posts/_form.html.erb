@@ -3,41 +3,41 @@
 <div class="pure-g-r form-new-post">
   <div class="pure-u-17-24">
     <div class="left-fields"^>
-      <%= f.text_field :title, required: true, id: 'post-title', placeholder: t('admin.post_title') %>
+      <%= f.text_field :title, required: true, id: 'post-title', placeholder: t('blogo.admin.post_title') %>
 
       <%= f.text_area :raw_content, class: 'ckeditor', required: true %>
 
-      <%= f.text_field :tags_string, placeholder: t('admin.tags_separated_with_commas') %>
+      <%= f.text_field :tags_string, placeholder: t('blogo.admin.tags_separated_with_commas') %>
     </div>
   </div>
 
   <div class="pure-u-7-24">
-    <%= f.text_field :permalink, class: 'pure-input-1', required: true, id: 'permalink', placeholder: t('admin.unique_permalink') %>
+    <%= f.text_field :permalink, class: 'pure-input-1', required: true, id: 'permalink', placeholder: t('blogo.admin.unique_permalink') %>
 
-    <%= f.label :published_at, t('admin.published_on') %>
-    <%= f.text_field :published_at, class: 'pure-input-1', id: 'input-datepicker', placeholder: t('admin.today') %>
+    <%= f.label :published_at, t('blogo.admin.published_on') %>
+    <%= f.text_field :published_at, class: 'pure-input-1', id: 'input-datepicker', placeholder: t('blogo.admin.today') %>
 
     <%= f.label :published, class: 'pure-checkbox' do %>
       <%= f.check_box :published %>
-      <%= t('admin.publish') %>
+      <%= t('blogo.admin.publish') %>
     <% end %>
 
   </div>
 </div>
 
 <br />
-<%= f.button t('admin.save_post_button') , class: 'pure-button button-success', id: 'button-save' %>
-<%= f.button t('admin.preview_post_button') , class: 'pure-button button-secondary', id: 'button-preview' %>
+<%= f.button t('blogo.admin.save_post_button') , class: 'pure-button button-success', id: 'button-save' %>
+<%= f.button t('blogo.admin.preview_post_button') , class: 'pure-button button-secondary', id: 'button-preview' %>
 
 
 <section class="semantic-content" id="modal-preview" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
   <div class="modal-inner">
     <header id="modal-label">
-      <h1><%= t('admin.preview_press_esc') %></h1>
+      <h1><%= t('blogo.admin.preview_press_esc') %></h1>
     </header>
     <div class="modal-content"><iframe></iframe></div>
   </div>
-  <a href="#!" class="modal-close" title="<%= t('admin.modal_title_close_preview') %>" data-close="Close" data-dismiss="modal">×</a>
+  <a href="#!" class="modal-close" title="<%= t('blogo.admin.modal_title_close_preview') %>" data-close="Close" data-dismiss="modal">×</a>
 </section>
 
 
