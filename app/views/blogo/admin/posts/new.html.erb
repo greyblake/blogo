@@ -1,4 +1,4 @@
-<h1 class="admin-header">Add a new post</h1>
+<h1 class="admin-header"><%= t('admin.add_new_post') %></h1>
 
 <%= blogo_form_for @post, :url => blogo_admin_posts_path, html: {id: 'post-form', class: 'pure-form pure-form-stacked'} do |f| %>
   <%= render partial: 'form', locals: {f: f} %>

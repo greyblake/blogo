@@ -3,7 +3,7 @@
 
   <div class="posted">
     <span>
-      By <%= post.user.name %>
+      <%= t('user.post_by') %> <%= post.user.name %>
     </span> |
     <span>
       <time datetime="<%= post.published_at %>">

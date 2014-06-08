@@ -1,14 +1,14 @@
 <%
-  confirm_message = %Q'Are you sure you want to delete "#{post.title}"?'
+  confirm_message = t('admin.modal_confirm_delete_post', post_title: post.title)
 %>
 
 <tr>
   <td><%= link_to post.title, edit_blogo_admin_post_path(post) %></td>
-  <td><%= post.status %></td>
+  <td><%= t("admin.post_status_#{post.status}") %></td>
   <td><%= post.user.name %></td>
-  <td><%= post.published_at.to_date %></td>
+  <td><%= l(post.published_at.to_date) %></td>
   <td>
-    <%= link_to 'edit', edit_blogo_admin_post_path(post), class: "pure-button  button-secondary" %>
-    <%= link_to 'delete', blogo_admin_post_path(post), method: :delete, data: {confirm: confirm_message}, class: "pure-button  button-warning" %>
+    <%= link_to t('admin.edit_post_button'), edit_blogo_admin_post_path(post), class: "pure-button  button-secondary" %>
+    <%= link_to t('admin.delete_post_button'), blogo_admin_post_path(post), method: :delete, data: {confirm: confirm_message}, class: "pure-button  button-warning" %>
   </td>
 </tr>
