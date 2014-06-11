@@ -44,9 +44,9 @@ Mount the blog routes to you rails application in `config/routes.rb`
   Blogo::Routes.mount_to(self, at: '/blog')
 ```
 
-Run the rails application and go to http://localhost:3000/blog/admin to create you first post!
+Run the rails application and go to `http://localhost:3000/blog/admin` to create you first post!
 
-Go to http://localhost::3000/blog to take a look at your posts.
+Go to `http://localhost::3000/blog` to take a look at your posts.
 
 ## Features
 
