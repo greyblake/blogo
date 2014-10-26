@@ -15,7 +15,7 @@ Mountable blog engine for Ruby on Rails 4.
 Add the gem to Gemfile of you Rails application:
 
 ```
-  gem 'blogo'
+gem 'blogo'
 ```
 
 Install the gem:
@@ -24,11 +24,19 @@ Install the gem:
 bundle install
 ```
 
+Install initializer file:
+
+```
+rails generate blogo:install
+```
+
+Take a look into `config/initializers/blogo.rb` and configure what you need.
+
 Install blogo migrations and run them:
 
 ```
-  rake blogo:install:migrations
-  rake db:migrate
+rake blogo:install:migrations
+rake db:migrate
 ```
 
 

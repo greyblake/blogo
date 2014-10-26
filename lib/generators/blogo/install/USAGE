@@ -1,0 +1,4 @@
+Creates `config/initializers/blogo.rb` with default Blogo settings.
+
+Example:
+  rails generate blogo:install
