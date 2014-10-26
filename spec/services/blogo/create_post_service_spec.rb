@@ -13,7 +13,7 @@ describe Blogo::CreatePostService do
 
   describe '#create!' do
     it 'creates a post' do
-      expect(service.create!).to be_true
+      expect(service.create!).to be true
 
       post = user.posts.last
       expect(post.title).to eq 'The Title'
@@ -26,7 +26,7 @@ describe Blogo::CreatePostService do
     describe 'with tags' do
       before do
         params[:tags_string] = ' Ruby, Esperanto, , love '
-        expect(service.create!).to be_true
+        expect(service.create!).to be true
       end
 
       it 'creates downcased tags and associates them with post' do
@@ -47,9 +47,11 @@ describe Blogo::CreatePostService do
       end
 
       it 'returns false and sets errors on post' do
-        expect(service.create!).to be_false
+        expect(service.create!).to be false
         expect(Blogo::Post.count).to eq 0
-        expect(service.post).to have(1).error_on(:title)
+
+        service.post.valid?
+        expect(service.post.errors[:title].size).to eq 1
       end
     end
 
@@ -60,7 +62,7 @@ describe Blogo::CreatePostService do
       end
 
       it 'sets html_overview' do
-        expect(service.create!).to be_true
+        expect(service.create!).to be true
         post = user.posts.last
 
         expect(post.html_content).to eq 'Prelude...  The content'

@@ -19,8 +19,9 @@ describe Blogo::UpdatePostService do
       end
 
       it 'returns false and sets errors on post' do
-        expect(service.update!).to be_false
-        expect(service.post).to have(1).error_on(:title)
+        expect(service.update!).to be false
+        service.post.valid?
+        expect(service.post.errors[:title].size).to eq 1
       end
     end
 
@@ -38,7 +39,7 @@ describe Blogo::UpdatePostService do
         # ensure old tags exist
         expect(Blogo::Tag.all.map(&:name)).to match_array(%w(ruby music))
 
-        expect(service.update!).to be_true
+        expect(service.update!).to be true
 
         post.reload
         expect(post.tags.map(&:name)).to match_array(%w[ruby esperanto])
@@ -50,7 +51,7 @@ describe Blogo::UpdatePostService do
 
       it 'does not removes tag completely if there other posts refer it' do
         FactoryGirl.create(:post, tags: %w(music))
-        expect(service.update!).to be_true
+        expect(service.update!).to be true
         expect(Blogo::Tag.all.map(&:name)).
           to match_array(%w(ruby esperanto music))
       end

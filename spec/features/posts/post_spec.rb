@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Post' do
+describe 'Post', type: :feature do
   let(:overview) { "Should we learn Esperanto?" }
   let(:content)  { "Should we learn Esperanto? Of course yes! It's much easier than English and much more powerful!" }
   before do

@@ -16,7 +16,9 @@ describe Blogo::User do
     it 'validates uniqueness of email' do
       FactoryGirl.create(:user, email: 'test@mail.com')
       user = described_class.new(email: 'test@mail.com')
-      expect(user).to have(1).error_on(:email)
+
+      user.valid?
+      expect(user.errors[:email]).to include("has already been taken")
     end
   end
 end
