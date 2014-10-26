@@ -1,3 +1,7 @@
+# v0.0.10 2014-10-27
+
+* [feature] Generator blogo:install to install intializer (greyblake)
+
 # v0.0.9 2014-06-08
 
 * [feature] Localization support: en, pt-BR (diegosouza)
