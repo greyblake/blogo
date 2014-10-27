@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Post', type: :feature do
+describe 'Post' do
   let(:overview) { "Should we learn Esperanto?" }
   let(:content)  { "Should we learn Esperanto? Of course yes! It's much easier than English and much more powerful!" }
   before do
@@ -24,5 +24,13 @@ describe 'Post', type: :feature do
 
     expect(current_path).to eq '/blog/learn-esperanto'
     expect(page).to have_content(content)
+  end
+
+  it 'shows "Powered by Blogo"' do
+    visit blogo_root_path
+    expect(page).to have_link("Powered by Blogo")
+
+    click_link 'Read'
+    expect(page).to have_link("Powered by Blogo")
   end
 end

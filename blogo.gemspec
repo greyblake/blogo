@@ -2,6 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
 require "blogo/version"
+require 'blogo/constants'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
@@ -9,7 +10,7 @@ Gem::Specification.new do |s|
   s.version     = Blogo::VERSION
   s.authors     = ["Sergey Potapov"]
   s.email       = ["blake131313@gmail.com"]
-  s.homepage    = "https://github.com/greyblake/blogo"
+  s.homepage    = Blogo::HOME_PAGE_URL
   s.summary     = "Mountable blog engine for Ruby on Rails"
   s.description = "Mountable blog engine for Ruby on Rails. It allows you to quickly add a featured blog to an existing rails application."
   s.license     = "MIT"

@@ -1,4 +1,6 @@
 require 'blogo/version'
+require 'blogo/constants'
+
 require 'blogo/errors'
 require 'blogo/engine'
 require 'blogo/config'
