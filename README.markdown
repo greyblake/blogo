@@ -3,11 +3,14 @@
 Mountable blog engine for Ruby on Rails 4.
 
 [![Build Status](https://travis-ci.org/greyblake/blogo.png?branch=master)](https://travis-ci.org/greyblake/blogo)
+[![Code Climate](https://codeclimate.com/github/greyblake/blogo/badges/gpa.svg)](https://codeclimate.com/github/greyblake/blogo)
+[![Coverage Status](https://coveralls.io/repos/greyblake/blogo/badge.png)](https://coveralls.io/r/greyblake/blogo)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/greyblake/blogo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ## Who uses Blogo?
 
 * [Brainv2 - online brain tranings](http://brainv2.com/blog)
+* [Travel or die](http://travel-or-die.com/blog)
 
 ## Quick start
 
@@ -55,6 +58,10 @@ Mount the blog routes to you rails application in `config/routes.rb`
 Run the rails application and go to `http://localhost:3000/blog/admin` to create you first post!
 
 Go to `http://localhost::3000/blog` to take a look at your posts.
+
+## More information?
+
+Please see [wiki](https://github.com/greyblake/blogo/wiki).
 
 ## Features
 

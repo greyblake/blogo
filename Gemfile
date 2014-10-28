@@ -17,4 +17,6 @@ group :test do
 
   gem 'jquery-rails'
   gem 'coffee-rails'
+  gem 'coveralls', require: false
 end
+

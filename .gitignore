@@ -12,3 +12,4 @@ spec/dummy/public/*
 
 .rake_tasks~
 Gemfile.lock
+coverage/
