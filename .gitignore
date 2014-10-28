@@ -11,3 +11,4 @@ spec/dummy/.sass-cache
 spec/dummy/public/*
 
 .rake_tasks~
+Gemfile.lock
