@@ -52,7 +52,7 @@ module Blogo::Admin
     # DELETE /admin/posts/:id
     #
     def destroy
-      post = Blogo::Post.find(params[:id])
+      post = Blogo::Post.where(permalink: params[:id]).first!
       Blogo::DestroyPostService.new(post).destroy!
 
       flash[:notice] = I18n.translate('blogo.admin.post_removed')
