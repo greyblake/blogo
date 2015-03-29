@@ -10,7 +10,8 @@ Mountable blog engine for Ruby on Rails 4.
 ## Who uses Blogo?
 
 * [Brainv2 - online brain tranings](http://brainv2.com/blog)
-* [Travel or die](http://travel-or-die.com/blog)
+* [Travel Or Die](http://travel-or-die.com/blog)
+* [SwingTradeBot](http://swingtradebot.com/blog)
 
 ## Quick start
 
