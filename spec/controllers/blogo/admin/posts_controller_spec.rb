@@ -112,7 +112,7 @@ describe Blogo::Admin::PostsController do
   describe '#destroy' do
     it 'deletes post' do
       blog_post = FactoryGirl.create(:post)
-      delete :destroy, id: blog_post.id
+      delete :destroy, id: blog_post.permalink
 
       expect(response).to redirect_to blogo_admin_posts_path
       expect(flash[:notice]).to eq 'The post is removed'
