@@ -1,3 +1,7 @@
+# v0.1.1 2015-03-30
+
+* [changed] replace dependency bcrypt-ruby with bcrypt (greyblake)
+
 # v0.1.0 2015-03-29
 
 * [fixed] Fix delete post bug (greyblake)
