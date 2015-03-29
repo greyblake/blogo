@@ -1,3 +1,8 @@
+# v0.1.0 2015-03-29
+
+* [fixed] Fix delete post bug (greyblake)
+* [fixed] Compatibility with rails 4.2 (greyblake)
+
 # v0.0.10 2014-10-27
 
 * [feature] Generator blogo:install to install intializer (greyblake)
