@@ -8,7 +8,7 @@ class Blogo::Post < ActiveRecord::Base
   validates :permalink, :title,  :raw_content, presence: true
   validates :permalink, uniqueness: true
 
-  scope :published, -> { where(published: true).where("published_at <= ?", Time.now) }
+  scope :published, -> { where(published: true).where("published_at <= ?", Time.zone.now) }
 
   default_scope { order('published_at DESC') }
 

@@ -36,7 +36,7 @@ module Blogo::Admin
     # @return [String]
     def image_directory
       @image_directory ||= begin
-        date_dir = Time.now.strftime('%Y/%m')
+        date_dir = Time.zone.now.strftime('%Y/%m')
         File.join(IMAGE_DIRECTORY, date_dir)
       end
     end
