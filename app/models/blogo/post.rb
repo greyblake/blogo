@@ -45,11 +45,12 @@ class Blogo::Post < ActiveRecord::Base
     html = html_overview || html_content
 
     self.meta_description =
-      html.gsub(/<\/?[^>]*>/, ' ').  # replace HTML tags with spaces
-           gsub(/&\w{1,9};|"/, '').  # remove HTML special chars and double quotes
-           gsub(/\n+/, " ").         # remove new lines
-           gsub(/\s+/, ' ').         # remove duplicated spaces
-           strip[0..200]             # strip spaces and get first 200 chars
+      html.
+        gsub(/<\/?[^>]*>/, ' ').  # replace HTML tags with spaces
+        gsub(/&\w{1,9};|"/, '').  # remove HTML special chars and double quotes
+        gsub(/\n+/, " ").         # remove new lines
+        gsub(/\s+/, ' ').         # remove duplicated spaces
+        strip[0..200]             # strip spaces and get first 200 chars
   end
 
   # Find first img tag and in content and grab its source.
