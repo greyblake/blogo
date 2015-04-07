@@ -1,7 +1,6 @@
 module Blogo
   # Creates new model of posts applying post params on it so it can be previewed.
   class PreviewPostService < BasePostService
-
     # @param user [Blogo::User]
     # @param params [Hash]
     def initialize(user, params)

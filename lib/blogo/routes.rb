@@ -5,7 +5,6 @@ module Blogo
 
       context.instance_eval do
         scope(path: blog_scope, module: 'blogo', as: 'blogo') do
-
           namespace :admin do
             # blogo_admin_path
             get "/" => "posts#index", as:  ""
@@ -28,9 +27,6 @@ module Blogo
           get '/tag/:tag/page/:page' => 'posts#index', as: 'tag_page'
           get '/feed'                => 'posts#feed' , as: 'feed', defaults: { format: 'atom' }
           get ":permalink"           => "posts#show" , as: "post"
-
-
-
         end
       end
     end

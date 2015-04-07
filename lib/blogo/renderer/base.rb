@@ -1,6 +1,5 @@
 module Blogo::Renderer
   class Base
-
     class << self
       # @!attribute [rw] dependencies
       #   @return [Array<Hash>]
@@ -43,6 +42,5 @@ module Blogo::Renderer
     def render(raw_text)
       raise AbstractMethodCallError, __method__
     end
-
   end
 end
