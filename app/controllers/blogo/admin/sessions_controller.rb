@@ -4,7 +4,7 @@ module Blogo::Admin
   # User is logged in if it has set sessions[:blogo_user_id].
   #
   class SessionsController < BaseController
-    skip_before_filter :ensure_authenticated!
+    skip_before_action :ensure_authenticated!
 
     # GET /admin/login
     #
