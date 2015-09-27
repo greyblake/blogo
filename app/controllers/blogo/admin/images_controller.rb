@@ -1,7 +1,7 @@
 module Blogo::Admin
   # Handles image upload with CKeditor.
   class ImagesController < BaseController
-    skip_before_filter :verify_authenticity_token
+    skip_before_action :verify_authenticity_token
 
     layout false
 
@@ -17,11 +17,11 @@ module Blogo::Admin
       image_name = upload_io.original_filename
       file_path = Rails.root.join('public', image_directory, image_name)
 
-      if File.exists?(file_path)
+      if File.exist?(file_path)
         @error = I18n.translate('blogo.admin.image_already_exists', image_name: image_name)
       else
         dir = File.dirname(file_path)
-        FileUtils.mkdir_p(dir) unless File.exists?(dir)
+        FileUtils.mkdir_p(dir) unless File.exist?(dir)
         File.binwrite(file_path, upload_io.read)
       end
 
@@ -36,7 +36,7 @@ module Blogo::Admin
     # @return [String]
     def image_directory
       @image_directory ||= begin
-        date_dir = Time.now.strftime('%Y/%m')
+        date_dir = Time.zone.now.strftime('%Y/%m')
         File.join(IMAGE_DIRECTORY, date_dir)
       end
     end

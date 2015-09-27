@@ -1,7 +1,6 @@
 module Blogo::Admin
   # Responsible for posts management: creation, editing, deletion, preview.
   class PostsController < BaseController
-
     # GET /admin/posts
     #
     def index

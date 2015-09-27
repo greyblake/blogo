@@ -1,6 +1,6 @@
 module Blogo::Admin
   class BaseController < Blogo::ApplicationController
-    before_filter :ensure_authenticated!
+    before_action :ensure_authenticated!
 
     layout 'blogo/admin'
 

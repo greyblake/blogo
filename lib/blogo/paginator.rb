@@ -86,8 +86,6 @@ module Blogo
     def next_page
       if pages.any? && pages_count > pages.last
         pages.last + 1
-      else
-        nil
       end
     end
 

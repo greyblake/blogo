@@ -4,7 +4,6 @@ require 'blogo/renderer/markdown'
 
 module Blogo
   module Renderer
-
     # Maps format names to renderers.
     RENDERERS = {
       :markdown => Blogo::Renderer::Markdown,
@@ -24,6 +23,5 @@ module Blogo
         raise(Blogo::Error, "Can't find renderer #{format.inspect}")
       end
     end
-
   end
 end
