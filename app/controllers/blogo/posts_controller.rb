@@ -1,6 +1,6 @@
 module Blogo
   # Responsible for showing posts and atom feeds to visitors.
-  class PostsController < ApplicationController
+  class PostsController < Blogo::ApplicationController
     layout 'blogo/blog'
 
     # Number of posts shown in feed.
