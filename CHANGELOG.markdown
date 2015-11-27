@@ -1,3 +1,7 @@
+# v0.1.2 2015-11-28
+
+* [fixed] fix routing bug in development env, issue #3 (greyblake)
+
 # v0.1.1 2015-03-30
 
 * [changed] replace dependency bcrypt-ruby with bcrypt (greyblake)
