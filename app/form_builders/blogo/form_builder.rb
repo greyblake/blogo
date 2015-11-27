@@ -13,5 +13,4 @@ class Blogo::FormBuilder < ActionView::Helpers::FormBuilder
       end
     end
   end
-
 end
