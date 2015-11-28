@@ -61,22 +61,15 @@ module Blogo
       @paginator = Paginator.new(
         posts_scope,
         :page     => (params[:page] || 1),
-        :per_page => conf.posts_per_page,
-        :size     => conf.paginator_size)
+        :per_page => Blogo.config.posts_per_page,
+        :size     => Blogo.config.paginator_size)
     end
 
     # Sets @recent_posts and @tags.
     #
     def set_vars
-      @recent_posts = Post.published.limit(conf.recent_posts) if conf.recent_posts
+      @recent_posts = Post.published.limit(Blogo.config.recent_posts) if Blogo.config.recent_posts
       @tags         = Tag.all
-    end
-
-    # Engine configuration. Method +config+ is already used by Rails.
-    #
-    # @return [Blogo::Config]
-    def conf
-      Blogo.config
     end
 
     # @return [String, nil] full URL to image or nil
