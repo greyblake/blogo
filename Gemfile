@@ -2,15 +2,14 @@ source "https://rubygems.org"
 
 gemspec
 
-
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'
 end
 
 group :test do
-  gem 'rspec', '~> 3.0.0'
-  gem 'rspec-rails'
+  gem 'rspec', '~> 3.4.0'
+  gem 'rspec-rails', '~> 3.4.0'
   gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'capybara'

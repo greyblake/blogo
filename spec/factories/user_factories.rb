@@ -3,7 +3,7 @@ FactoryGirl.define do
     name "Ludoviko Zamenhofo"
     sequence(:email) { |n| "ludoviko#{n}@eo.com" }
 
-    ignore { password 'sekreto' }
+    transient { password 'sekreto' }
 
     after(:build) do |user, evaluator|
       user.password              = evaluator.password

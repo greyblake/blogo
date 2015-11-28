@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Pagination' do
   before do
-    Blogo.config.stub(posts_per_page: 2)
+    allow(Blogo.config).to receive(:posts_per_page).and_return(2)
 
     FactoryGirl.create(:post, title: 'Ruby and Vim'          , tags: %w(ruby vim))
     FactoryGirl.create(:post, title: 'Ruby with RSpec'       , tags: %w(ruby rspec))

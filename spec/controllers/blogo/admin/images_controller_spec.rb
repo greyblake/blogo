@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::Admin::ImagesController do
+RSpec.describe Blogo::Admin::ImagesController do
   before { login! }
 
   # Remove uploads

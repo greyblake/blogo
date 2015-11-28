@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::Renderer::Base do
+RSpec.describe Blogo::Renderer::Base do
   let(:renderer_class) do
     Class.new(described_class) do
       add_dependency :gem => 'gem_name', :require => 'require_file'

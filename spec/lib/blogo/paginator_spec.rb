@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::Paginator do
+RSpec.describe Blogo::Paginator do
   describe '#items' do
     it 'returns items of passed page' do
       FactoryGirl.create_list(:post, 10)

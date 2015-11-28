@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::Renderer do
+RSpec.describe Blogo::Renderer do
   describe '.get' do
     it 'initializes renderer' do
       expect(Blogo::Renderer::Html).to receive(:load_dependencies!)

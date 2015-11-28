@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::User do
+RSpec.describe Blogo::User do
   describe 'associations' do
     it { expect(subject).to have_many :posts }
   end

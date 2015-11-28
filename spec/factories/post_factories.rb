@@ -10,7 +10,7 @@ FactoryGirl.define do
 
     association :user
 
-    ignore { tags ['test'] }
+    transient { tags ['test'] }
 
     after(:build) do |post, evaluator|
       evaluator.tags.each do |tag_name|

@@ -8,7 +8,7 @@ describe 'Recent Posts' do
   end
 
   it 'shows links to recent posts' do
-    Blogo.config.stub(recent_posts: 2)
+    allow(Blogo.config).to receive(:recent_posts).and_return(2)
     visit blogo_root_path
 
     within('.blogo-recent-posts') do
@@ -25,7 +25,7 @@ describe 'Recent Posts' do
 
 
   it 'does not shows recent posts if config.recent_posts = nil' do
-    Blogo.config.stub(recent_posts: nil)
+    expect(Blogo.config).to receive(:recent_posts).and_return(nil)
     visit blogo_root_path
 
     expect(page).not_to have_selector('blogo-recent-posts')

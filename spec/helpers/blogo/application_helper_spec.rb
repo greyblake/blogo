@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::ApplicationHelper do
+RSpec.describe Blogo::ApplicationHelper do
   describe '#path_to_page' do
     it 'generates path to page' do
       expect(helper).to receive(:blogo_page_path).with(10)

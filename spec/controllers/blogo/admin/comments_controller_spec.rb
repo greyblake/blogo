@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::Admin::CommentsController do
+RSpec.describe Blogo::Admin::CommentsController do
   before { login! }
 
   describe '#index' do

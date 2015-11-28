@@ -5,7 +5,6 @@ Mountable blog engine for Ruby on Rails 4.
 [![Build Status](https://travis-ci.org/greyblake/blogo.png?branch=master)](https://travis-ci.org/greyblake/blogo)
 [![Code Climate](https://codeclimate.com/github/greyblake/blogo/badges/gpa.svg)](https://codeclimate.com/github/greyblake/blogo)
 [![Coverage Status](https://coveralls.io/repos/greyblake/blogo/badge.png)](https://coveralls.io/r/greyblake/blogo)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/greyblake/blogo/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ## Who uses Blogo?
 

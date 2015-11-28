@@ -22,7 +22,7 @@ describe Blogo::PostsController do
       post1 = FactoryGirl.create(:post)
       post2 = FactoryGirl.create(:post)
       post3 = FactoryGirl.create(:post)
-      Blogo.config.stub(recent_posts: 2)
+      allow(Blogo.config).to receive(:recent_posts).and_return(2)
 
       get :index
       expect(assigns(:recent_posts)).to eq [post3, post2]
@@ -37,7 +37,8 @@ describe Blogo::PostsController do
     end
 
     it 'assigns @paginator' do
-      Blogo.config.stub(posts_per_page: 13, paginator_size: 11)
+      allow(Blogo.config).to receive(:posts_per_page).and_return(13)
+      allow(Blogo.config).to receive(:paginator_size).and_return(11)
 
       get :index, page: 2
 

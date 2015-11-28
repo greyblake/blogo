@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Blogo::Tag do
+RSpec.describe Blogo::Tag do
   describe 'associations' do
     it { expect(subject).to have_many(:taggings) }
     it { expect(subject).to have_many(:posts)    }

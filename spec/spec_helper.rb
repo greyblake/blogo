@@ -5,8 +5,8 @@ Coveralls.wear!
 
 require File.expand_path("../dummy/config/environment.rb", __FILE__)
 
+require 'rspec'
 require 'rspec/rails'
-require 'rspec/autorun'
 require 'factory_girl_rails'
 require 'capybara/rails'
 require 'capybara/rspec'
