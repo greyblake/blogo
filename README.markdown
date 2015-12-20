@@ -79,7 +79,7 @@ Please see [wiki](https://github.com/greyblake/blogo/wiki).
 * SEO optimized: generates meta description, keywords, meta tags for facebook([OpenGraph](http://ogp.me/)) and twitter
 * Can be customized for your own needs.
 * Very few external dependencies
-* Localization support
+* Localization support (en, es, pt-BR, zh-CN)
 
 
 ## Markup Formats

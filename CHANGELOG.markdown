@@ -1,3 +1,8 @@
+# v0.1.3 2015-12-20
+
+* [feature] Chinese localization (jokester)
+* [feature] Spanish localization (taniadaniela)
+
 # v0.1.2 2015-11-28
 
 * [fixed] fix routing bug in development env, issue #3 (greyblake)
