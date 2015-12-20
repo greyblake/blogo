@@ -52,12 +52,20 @@ rake blogo:create_user[user_name,user@email.com,password]
 Mount the blog routes to you rails application in `config/routes.rb`
 
 ```
-  Blogo::Routes.mount_to(self, at: '/blog')
+Blogo::Routes.mount_to(self, at: '/blog')
 ```
 
 Run the rails application and go to `http://localhost:3000/blog/admin` to create you first post!
 
 Go to `http://localhost::3000/blog` to take a look at your posts.
+
+## Troubleshooting
+
+If you use `zsh` and experience problem to create use through rake task, try to escape `[` and `]` characters:
+
+```
+rake blogo:create_user\[user_name,user@email.com,password\]
+```
 
 ## More information?
 
