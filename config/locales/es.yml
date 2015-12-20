@@ -1,0 +1,143 @@
+es:
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    - 
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %b"
+    month_names:
+    - 
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: alrededor de 1 hora
+        other: alrededor de %{count} horas
+      about_x_months:
+        one: alrededor de 1 mes
+        other: alrededor de %{count} meses
+      about_x_years:
+        one: alrededor de 1 año
+        other: alrededor de %{count} años
+      almost_x_years:
+        one: casi 1 año
+        other: casi %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de 1 minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: más de 1 año
+        other: más de %{count} años
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minutos
+      month: Mes
+      second: Segundos
+      year: Año
+  blogo:
+    user:
+      comments: 'Comentarios'
+      please_enable_javascript: 'Por favor habilita JavaScript para ver los comentarios.'
+      post_by: 'Por'
+      read_post: 'Leer ➞'
+      recent_posts: 'Publicaciones recientes'
+      tags: 'Etiquetas'
+
+    admin:
+      add_new_post: 'Agregar una nueva publicación'
+      author: 'Autor'
+      comments: 'Comentarios'
+      delete_post_button: 'borrar'
+      edit_post: 'Editar publicación'
+      edit_post_button: 'editar'
+      email: 'Email'
+      image_already_exists: 'Imagen con nombre "%{image_name}" ya existe'
+      logged_in: 'Has iniciado sesión'
+      logged_out: 'Has cerrado sesión'
+      login: 'Iniciar sesión'
+      login_button: 'Iniciar sesión'
+      login_fail: 'Email o contraseña incorrectos'
+      modal_confirm_delete_post: 'Está seguro que quiere borrar "%{post_title}"?'
+      modal_title_close_preview: 'Cerrar vista previa'
+      new_post: 'Nueva Publicación'
+      password: 'Contraseña'
+      post_created: 'Se ha creado la publicación'
+      post_removed: 'Se ha borrado la publicación'
+      post_status_draft: 'borrador'
+      post_status_published: 'publicado'
+      post_title: 'Título de la publicación'
+      post_updated: 'La publicación se ha actualizado.'
+      posts: 'Publicaciones'
+      preview_post_button: 'Vista previa'
+      preview_press_esc: 'Vista previa. Presiona ESC para salir.'
+      publish: 'Publicar'
+      published_on: 'Publicado en'
+      save_post_button: 'Guardar'
+      sign_out: 'Cerrar sesión'
+      status: 'Estado'
+      tags_separated_with_commas: 'Etiquetas separadas con coma'
+      title: 'Título'
+      today: 'Hoy'
+      unique_permalink: 'unique-permalink'
+      recent_comments: 'Comentarios recientes'
