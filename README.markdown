@@ -61,7 +61,7 @@ Go to `http://localhost::3000/blog` to take a look at your posts.
 
 ## Troubleshooting
 
-If you use `zsh` and experience problem to create use through rake task, try to escape `[` and `]` characters:
+If you use `zsh` and experience a problem to create a user through the rake task, try to escape `[` and `]` characters:
 
 ```
 rake blogo:create_user\[user_name,user@email.com,password\]
