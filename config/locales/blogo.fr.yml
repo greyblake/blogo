@@ -1,0 +1,47 @@
+fr:
+  blogo:
+    user:
+      comments: 'Commentaires'
+      please_enable_javascript: 'Veuillez autoriser JavaScript pour voir les commentaires.'
+      post_by: 'De'
+      read_post: 'Lu ➞'
+      recent_posts: "Articles récents"
+      tags: 'Tags'
+
+    admin:
+      add_new_post: 'Ajouter un nouvel article'
+      author: 'Auteur'
+      comments: 'Commentaires'
+      delete_post_button: 'supprimer'
+      edit_post: "Editer l'article"
+      edit_post_button: "Editer"
+      email: 'Email'
+      image_already_exists: "L'image avec le nom '%{image_name}' existe déjà"
+      logged_in: "Vous êtes connecté"
+      logged_out: "Vous êtes déconnecté"
+      login: 'Connexion'
+      login_button: 'Se connecter'
+      login_fail: 'Email ou mot de passe incorrect'
+      modal_confirm_delete_post: "Etes-vous sûr de vouloir supprimer '%{post_title}' ?"
+      modal_title_close_preview: "Fermer l'aperçu"
+      new_post: 'Nouvel Article'
+      password: 'Mot de passe'
+      post_created: "L'article a été créé"
+      post_removed: "L'article a été déplacé"
+      post_status_draft: 'Brouillon'
+      post_status_published: "Publié"
+      post_title: "Titre de l'article"
+      post_updated: "L'article a été mis à jour"
+      posts: 'Articles'
+      preview_post_button: "Aperçu"
+      preview_press_esc: "Aperçu. Appuyez sur Echap pour revenir."
+      publish: "Publier"
+      published_on: "Publié"
+      save_post_button: 'Enregistrer'
+      sign_out: "Se déconnecter"
+      status: 'Statut'
+      tags_separated_with_commas: "Tags séparés par des virgules"
+      title: 'Titre'
+      today: "Aujourd'hui"
+      unique_permalink: 'permalink unique'
+      recent_comments: "Commentaires récents"
