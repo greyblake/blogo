@@ -10,6 +10,7 @@ module Blogo
     #
     def index
       @tag = params[:tag]
+      @archives = params[:archives]
       set_vars
       set_paginator
 
@@ -45,7 +46,6 @@ module Blogo
       render 'feed', layout: false
     end
 
-
     private
 
     # Build a paginator object and set to @paginator.
@@ -61,7 +61,7 @@ module Blogo
       @paginator = Paginator.new(
         posts_scope,
         :page     => (params[:page] || 1),
-        :per_page => Blogo.config.posts_per_page,
+        :per_page => (@archives ? Blogo.config.archive_posts_per_page : Blogo.config.posts_per_page),
         :size     => Blogo.config.paginator_size)
     end
 
