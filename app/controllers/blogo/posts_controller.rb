@@ -10,7 +10,9 @@ module Blogo
     #
     def index
       @tag = params[:tag]
-      @archives = params[:archives]
+      if(request.path.eql?('/blog/archives'))
+        @archives = true
+      end
       set_vars
       set_paginator
 

@@ -22,7 +22,7 @@ module Blogo
           end
 
           get '/'                    => 'posts#index', as: 'root'
-          get '/:archives'           => 'posts#index', as: 'archives'
+          get '/archives'           => 'posts#index', as: 'archives'
           get '/page/:page'          => 'posts#index', as: 'page'
           get '/tag/:tag'            => 'posts#index', as: 'tag'
           get '/tag/:tag/page/:page' => 'posts#index', as: 'tag_page'
