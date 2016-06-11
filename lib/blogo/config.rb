@@ -6,7 +6,6 @@ module Blogo
     attr_accessor :table_name_prefix
 
     attr_accessor :posts_per_page
-    attr_accessor :archive_posts_per_page
     attr_accessor :paginator_size
     attr_accessor :recent_posts
 
@@ -28,7 +27,6 @@ module Blogo
       @site_subtitle       = 'Mountable blog engine for Ruby on Rails'
       @table_name_prefix   = 'blogo_'
       @posts_per_page      = 10
-      @archive_posts_per_page = 10
       @paginator_size      = 5
       @recent_posts        = 5
       @disqus_shortname    = nil
