@@ -29,11 +29,7 @@ CKEDITOR.editorConfig = function( config ) {
   config.removeDialogTabs = 'image:advanced;link:advanced';
 
   // "Read more" plugin
-  // Inserting code blocks plugin
-  config.extraPlugins = 'wpmore,codesnippet';
-
-  // Setting code snippet theme as dracula
-  config.codeSnippet_theme = 'dracula';
+  config.extraPlugins = 'wpmore';
 
   // URL to upload images with image plugin
   config.filebrowserUploadUrl = '<%= Rails.application.routes.url_helpers.blogo_admin_images_path %>';
